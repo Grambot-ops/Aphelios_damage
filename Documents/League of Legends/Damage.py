@@ -240,11 +240,18 @@ WEAPON_DAMAGE_FACTORS = {
 #    effective_damage = raw_damage * (100 / (100 + armor))   if armor >= 0
 #    effective_damage = raw_damage * (2 - 100 / (100 - armor)) if armor < 0
 # ============================================================
-def apply_physical_mitigation(damage, armor):
-    if armor >= 0:
-        multiplier = 100 / (100 + armor)
+def apply_physical_mitigation(damage, enemy_armor, armor_pen=0.0, lethality=0.0):
+    """
+    Apply damage mitigation with enemy armor adjusted by % armor pen and flat lethality.
+    - armor_pen should be in decimal form (e.g. 0.40 for 40% armor pen).
+    - lethality is subtracted flat from the enemy armor.
+    """
+    # Adjust enemy armor using % armor pen and flat lethality.
+    effective_armor = max(0, enemy_armor * (1 - armor_pen) - lethality)  # Armor cannot go negative
+    if effective_armor >= 0:
+        multiplier = 100 / (100 + effective_armor)
     else:
-        multiplier = 2 - 100 / (100 - armor)
+        multiplier = 2 - 100 / (100 - effective_armor)
     return damage * multiplier
 
 # ============================================================
@@ -252,7 +259,7 @@ def apply_physical_mitigation(damage, armor):
 # ============================================================
 class ApheliosSimulator:
     """Simulates Aphelios' damage output and build performance."""
-    def __init__(self, items, enemy_armor=150.0, enemy_health=2500.0, weapon_switch_delay=ROTATION_DELAY, simulate_random=False):
+    def __init__(self, items, enemy_armor=250.0, enemy_health=3500.0, weapon_switch_delay=ROTATION_DELAY, simulate_random=True):
         self.weapon_queue = deque(["Calibrum", "Severum", "Gravitum", "Infernum", "Crescendum"])
         self.main_hand = WEAPONS[self.weapon_queue[0]]
         self.off_hand = WEAPONS[self.weapon_queue[1]]
@@ -263,6 +270,7 @@ class ApheliosSimulator:
         self.enemy_health = float(enemy_health)
         self.time = 0.0  # Simulation time in seconds
         self.ability_cooldown = 0.0
+        self.weapon_ammo = {w: 50 for w in WEAPONS}
 
     @functools.lru_cache(maxsize=128)
     def _calculate_base_stats(self, items_tuple):
@@ -273,7 +281,7 @@ class ApheliosSimulator:
             "Crit": 0.0,
             "CritDmg": DEFAULT_CRIT_DAMAGE,
             "Lethality": 0.0,
-            "ArmorPen": 0.0,
+            "ArmorPen": 0.0,  # % Armor Penetration (Only highest value applies)
             "MagicPen": 0.0,
             "OnHit": 0.0,
             "LS": 0.0,
@@ -303,6 +311,12 @@ class ApheliosSimulator:
                 if stat == "AD":
                     bonus_ad += float(value)
                     continue
+                if stat in ["ArmorPen", "Armor Pen"]:  # Pick highest % Armor Pen
+                    stats["ArmorPen"] = max(stats["ArmorPen"], float(value))
+                    continue
+                if stat == "Lethality":  # Lethality stacks
+                    stats["Lethality"] += float(value)
+                    continue
                 if isinstance(value, tuple):
                     try:
                         stats[stat] = stats.get(stat, 0.0) + sum(float(v) for v in value) / len(value)
@@ -327,54 +341,102 @@ class ApheliosSimulator:
 
         return stats
 
+
     def calculate_dps(self, duration=10):
         total_damage = 0.0
         while self.time < duration:
+            if self.weapon_ammo[self.main_hand.name] <= 0:
+                self.rotate_weapon()
+            
             attack_time = 1.0 / self.stats["AS"]
             total_damage += self.simulate_attack()
             self.time += attack_time
+            
             if self.time - self.ability_cooldown >= ABILITY_COOLDOWN and self.main_hand.moonlight >= 10:
                 total_damage += self.simulate_ability()
                 self.ability_cooldown = self.time + ABILITY_CAST_TIME
                 self.time += ABILITY_CAST_TIME
-        return total_damage / duration
+                
+            # Stop simulation if no ammo remains for all weapons
+            if all(ammo <= 0 for ammo in self.weapon_ammo.values()):
+                break
+        
+        return total_damage / duration if duration > 0 else 0
+
 
     def simulate_attack(self):
-        # Separate base AD and bonus AD for more accurate calculations
+        if self.weapon_ammo[self.main_hand.name] <= 0:
+            self.rotate_weapon()
+        
+        # Consume ammo
+        self.use_ammo(1)
+        
         base_ad = BASE_AD_LEVEL18
         bonus_ad = self.stats["BonusAD"]
         total_ad = base_ad + bonus_ad
         
-        # Calculate base damage including attack speed
         base_damage = total_ad * self.stats["AS"]
         
-        # Apply crit chance and damage
         if random.random() < self.stats["Crit"]:
             crit_multiplier = self.stats["CritDmg"]
             damage = base_damage * crit_multiplier
         else:
             damage = base_damage
 
-        # Apply any weapon-specific modifiers
         weapon_modifier = self.main_hand.base_damage_mod[0]
         damage *= weapon_modifier
+        
+        adjusted_armor = self.enemy_armor * (1 - self.stats["ArmorPen"])
+        effective_damage = apply_physical_mitigation(
+            damage,
+            self.enemy_armor,
+            max(self.stats.get("ArmorPen", 0.0), 0.0),  # Use only the highest % Armor Pen
+            self.stats.get("Lethality", 0.0)  # Lethality always stacks
+        )
 
-        # Calculate effective damage after armor
-        effective_damage = apply_physical_mitigation(damage, self.enemy_armor)
         return effective_damage
+
 
     def simulate_ability(self):
-        # Include bonus AD in ability damage calculation
+        if self.weapon_ammo[self.main_hand.name] <= 0:
+            self.rotate_weapon()
+        
+        # Abilities consume more ammo
+        self.use_ammo(10)  # Adjust this value based on Aphelios' ability mechanics
+        
         total_ad = self.stats["AD"]
-        raw_ability_damage = total_ad * 2
+        weapon = self.main_hand.name
         
-        # Apply weapon-specific ability modifiers
-        ability_modifier = self.main_hand.base_damage_mod[1]
-        raw_ability_damage *= (1 + ability_modifier)
-        
-        effective_damage = apply_physical_mitigation(raw_ability_damage, self.enemy_armor)
-        return effective_damage
+        raw_ability_damage = total_ad * WEAPONS[weapon].base_damage_mod[1]
 
+        ability_effects = WEAPONS[weapon].ability_effect
+        if "execute" in ability_effects:
+            raw_ability_damage *= (1 + ability_effects["execute"])
+        if "lifesteal_boost" in ability_effects:
+            raw_ability_damage *= (1 + ability_effects["lifesteal_boost"])
+        
+        return apply_physical_mitigation(
+                        raw_ability_damage, 
+                        self.enemy_armor, 
+                        self.stats.get("ArmorPen", 0.0), 
+                        self.stats.get("Lethality", 0.0)
+                    )
+
+
+    def use_ammo(self, amount=1):
+        """Consumes ammo and rotates weapons when needed"""
+        self.weapon_ammo[self.main_hand.name] -= amount
+        if self.weapon_ammo[self.main_hand.name] <= 0:
+            self.rotate_weapon()
+
+    def rotate_weapon(self):
+        """Moves the main hand weapon to the back of the queue"""
+        self.weapon_queue.rotate(-1)
+        self.main_hand = WEAPONS[self.weapon_queue[0]]
+        self.off_hand = WEAPONS[self.weapon_queue[1]]
+         # Reset weapon ammo when it cycles back in
+        if self.weapon_ammo[self.main_hand.name] <= 0:
+            self.weapon_ammo[self.main_hand.name] = 50
 # ============================================================
 # Chunking Helper Function
 # ============================================================
