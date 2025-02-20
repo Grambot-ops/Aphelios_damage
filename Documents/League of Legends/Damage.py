@@ -13,7 +13,7 @@ import os
 #   - Base AD: 94.1, Base AS: 0.64, Health: 2334, Mana: 1062, Armor: 97.4, MR: 52.1,
 #     Crit Damage: 175% (1.75), Move Speed: 325, Attack Range: 550.
 #
-# Damage research (&#8203;:contentReference[oaicite:0]{index=0}) shows that physical damage is mitigated by:
+# Damage research shows that physical damage is mitigated by:
 #    effective_damage = raw_damage * (100 / (100 + armor))   if armor >= 0
 #    effective_damage = raw_damage * (2 - 100 / (100 - armor)) if armor < 0
 #
@@ -232,6 +232,7 @@ ITEM_CONSTRAINTS = {
         "max": 1
     }
 }
+
 def is_valid_build(combo):
     """
     Checks if a build is valid according to item constraints.
@@ -242,6 +243,7 @@ def is_valid_build(combo):
         if count > constraint_group["max"]:
             return False
     return True
+
 # ============================================================
 # Weapon Damage Factors (synergy factors)
 # ============================================================
@@ -256,7 +258,7 @@ WEAPON_DAMAGE_FACTORS = {
 # ============================================================
 # Helper Function: Apply Physical Damage Mitigation
 #
-# Based on research (&#8203;:contentReference[oaicite:1]{index=1}):
+# Based on research:
 #    effective_damage = raw_damage * (100 / (100 + armor))   if armor >= 0
 #    effective_damage = raw_damage * (2 - 100 / (100 - armor)) if armor < 0
 # ============================================================
@@ -280,6 +282,7 @@ def apply_physical_mitigation(damage, enemy_armor, armor_pen=0.0, lethality=0.0)
         multiplier = 2 - 100 / (100 - final_armor)
     
     return damage * multiplier
+
 # ============================================================
 # Aphelios Simulator
 # ============================================================
@@ -369,7 +372,6 @@ class ApheliosSimulator:
         if has_infinity_edge and stats["Crit"] >= 0.6:
             stats["CritDmg"] += 0.4
 
-
         return stats
 
     def calculate_dps(self, duration=100):
@@ -449,7 +451,6 @@ class ApheliosSimulator:
 
         return effective_damage
 
-
     def simulate_ability(self):
         if self.weapon_ammo[self.main_hand.name] <= 0:
             self.rotate_weapon()
@@ -494,7 +495,6 @@ class ApheliosSimulator:
         self.weapon_ammo[self.main_hand.name] -= amount
         if self.weapon_ammo[self.main_hand.name] <= 0:
             self.rotate_weapon()
-
     def rotate_weapon(self):
         # Proper rotation delay from PDF
         self.time += 1.0  # 1 second assembly time
@@ -511,6 +511,7 @@ class ApheliosSimulator:
         # Crescendum stack preservation
         if exhausted == "Crescendum":
             self.chakram_stacks = int(self.chakram_stacks * 0.7)
+
 # ============================================================
 # Chunking Helper Function
 # ============================================================
@@ -590,12 +591,13 @@ def optimize_aphelios_build(simulation_duration=300, enemy_armor=150, enemy_heal
             all_results.extend(future.result())
 
     return sorted(all_results, key=lambda x: (-x[1], -x[2]))
+
 if __name__ == "__main__":
     top_builds = optimize_aphelios_build()
     print("Top Aphelios Builds:")
-    for i, (build, score, dps, synergy, health_scaling, armor_mr_rating, mobility_factor, life_steal_rating, omnivamp_rating) in enumerate(top_builds[:5], 1):
+    for i, (build, score, dps, damage_synergy, health_scaling, armor_mr_rating, mobility_factor, life_steal_rating, omnivamp_rating) in enumerate(top_builds[:5], 1):
         print(f"{i}. Items: {', '.join(build)}")
         print(f"   DPS: {dps:.1f} | Total Rating: {score:.1f}")
-        print(f"   Synergy: {synergy:.1f} | Health Scaling: {health_scaling:.1f}")
+        print(f"   Synergy: {damage_synergy:.1f} | Health Scaling: {health_scaling:.1f}")
         print(f"   Armor/MR: {armor_mr_rating:.1f} | Mobility: {mobility_factor:.1f}")
         print(f"   Lifesteal: {life_steal_rating:.1f} | Omnivamp: {omnivamp_rating:.1f}\n")
