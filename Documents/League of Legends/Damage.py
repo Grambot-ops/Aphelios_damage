@@ -374,7 +374,7 @@ class ApheliosSimulator:
 
         return stats
 
-    def calculate_dps(self, duration=100):
+    def calculate_dps(self, duration=500):
         total_damage = 0.0
         
         while self.time < duration:
@@ -402,34 +402,28 @@ class ApheliosSimulator:
         if self.weapon_ammo[self.main_hand.name] <= 0:
             self.rotate_weapon()
         
-        # Consume ammo
         self.use_ammo(1)
         
         base_ad = BASE_AD_LEVEL18
         bonus_ad = self.stats["BonusAD"]
         total_ad = base_ad + bonus_ad + 68  # Level 18 passive AD
         
-        # Calculate attack speed with 2.5 cap
         attack_speed = min(2.5, BASE_AS * (1 + self.stats.get("AS", 0)))
         base_damage = total_ad
         
-        # Apply crit
         if random.random() < self.stats["Crit"]:
             crit_multiplier = self.stats["CritDmg"]
             damage = base_damage * crit_multiplier
         else:
             damage = base_damage
 
-        # Apply weapon modifier
         weapon_modifier = self.main_hand.base_damage_mod[0]
         damage *= weapon_modifier
         
-        # Add weapon-specific effects
         if self.main_hand.name == "Calibrum":
             mark_damage = total_ad * 0.15  # 15% AD mark damage
             damage += mark_damage
         elif self.main_hand.name == "Severum":
-            # Healing calculated but doesn't affect damage
             self.stats["LS"] += damage * 0.03
         elif self.main_hand.name == "Infernum":
             splash_damage = total_ad * 0.75  # 75% AD splash
@@ -438,10 +432,10 @@ class ApheliosSimulator:
         if self.main_hand.name == "Crescendum":
             base_damage = total_ad * (0.1385 * self.chakram_stacks)  # Bonus damage only
             self.chakram_stacks = max(0, self.chakram_stacks - 3)
-        elif self.off_hand.name == "Crescendum":  # Only generate when off-hand
-            if random.random() < 0.65:  # Actual 65% chance from PDF
+        elif self.off_hand.name == "Crescendum":
+            if random.random() < 0.65:
                 self.chakram_stacks = min(20, self.chakram_stacks + 1)
-       
+    
         effective_damage = apply_physical_mitigation(
             damage,
             self.enemy_armor,
@@ -450,7 +444,7 @@ class ApheliosSimulator:
         )
 
         return effective_damage
-
+    
     def simulate_ability(self):
         if self.weapon_ammo[self.main_hand.name] <= 0:
             self.rotate_weapon()
@@ -462,7 +456,6 @@ class ApheliosSimulator:
         
         raw_ability_damage = total_ad * WEAPONS[weapon].base_damage_mod[1]
         
-        # Apply weapon-specific ability effects
         ability_effects = WEAPONS[weapon].ability_effect
         if weapon == "Calibrum":
             if "execute" in ability_effects:
@@ -476,10 +469,8 @@ class ApheliosSimulator:
                 raw_ability_damage *= (1 + ability_effects["splash"])
                 raw_ability_damage *= 1.25  # AOE bonus
         if self.main_hand.name == "Crescendum":
-            # Sentry generates temporary Chakrams
             self.active_chakrams.add(self.time + 5.0)
         
-        # Update Chakram stack count from active durations
         self.chakram_stacks = len([t for t in self.active_chakrams if t > self.time])
         
         effective_damage = apply_physical_mitigation(
@@ -571,7 +562,7 @@ def simulate_build_chunk(builds, simulation_duration, enemy_armor, enemy_health)
         results.append(result)
     return results
 
-def optimize_aphelios_build(simulation_duration=300, enemy_armor=150, enemy_health=2500, chunk_size=500):
+def optimize_aphelios_build(simulation_duration=900, enemy_armor=200, enemy_health=3000, chunk_size=500):
     # Generate only valid item combinations
     item_combos = [
         combo for combo in itertools.combinations(ITEMS.keys(), 5)
