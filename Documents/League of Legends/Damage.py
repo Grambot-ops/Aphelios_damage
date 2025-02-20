@@ -186,7 +186,7 @@ WEAPONS = {
 ITEMS = {
     "Muramana": {"AD": 49.29, "Ability Haste": 31.0, "Mana": 860.0, "name": "Muramana"},
     "Axiom Arc": {"AD": 55.0, "Ability Haste": 20.0, "Lethality": 18.0, "UltimateRefund": 0.15, "name": "Axiom Arc"},
-    "Black Cleaver": {"AD": 40.0, "Ability Haste": 20.0, "Health": 400.0, "ArmorShred": 0.30, "name": "Black Cleaver"},
+    "Black Cleaver": {"AD": 40.0, "Ability Haste": 20.0, "Health": 400.0, "ArmorPen": 0.30, "name": "Black Cleaver"},
     "Blade of the Ruined King": {"AD": 40.0, "Attack Speed": 0.25, "Lifesteal": 0.10, "OnHitCurrentHealth": 0.08, "name": "Blade of the Ruined King"},
     "Bloodthirster": {"AD": 80.0, "Lifesteal": 0.15, "Shield": (165.0, 315.0), "name": "Bloodthirster"},
     "Death's Dance": {"AD": 60.0, "Ability Haste": 15.0, "Armor": 50.0, "DamageReduction": 0.30, "name": "Death's Dance"},
