@@ -589,6 +589,6 @@ if __name__ == "__main__":
     for i, (build, score, dps, damage_synergy, health_scaling, armor_mr_rating, mobility_factor, life_steal_rating, omnivamp_rating) in enumerate(top_builds[:5], 1):
         print(f"{i}. Items: {', '.join(build)}")
         print(f"   DPS: {dps:.1f} | Total Rating: {score:.1f}")
-        print(f"   Synergy: {damage_synergy:.1f} | Health Scaling: {health_scaling:.1f}")
-        print(f"   Armor/MR: {armor_mr_rating:.1f} | Mobility: {mobility_factor:.1f}")
-        print(f"   Lifesteal: {life_steal_rating:.1f} | Omnivamp: {omnivamp_rating:.1f}\n")
+        # print(f"   Synergy: {damage_synergy:.1f} | Health Scaling: {health_scaling:.1f}")
+        # print(f"   Armor/MR: {armor_mr_rating:.1f} | Mobility: {mobility_factor:.1f}")
+        # print(f"   Lifesteal: {life_steal_rating:.1f} | Omnivamp: {omnivamp_rating:.1f}\n")
