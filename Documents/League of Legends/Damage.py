@@ -222,6 +222,26 @@ ITEMS = {
     "Youmuu's Ghostblade": {"AD": 55.0, "Lethality": 18.0, "MoveSpeedOutOfCombat": (20.0, 10.0), "name": "Youmuu's Ghostblade"}
 }
 
+ITEM_CONSTRAINTS = {
+    "last_whisper": {
+        "items": ["Lord Dominik's Regards", "Serylda's Grudge", "Mortal Reminder"],
+        "max": 1
+    },
+    "lifeline": {
+        "items": ["Immortal Shieldbow", "Maw of Malmortius", "Sterak's Gage"],
+        "max": 1
+    }
+}
+def is_valid_build(combo):
+    """
+    Checks if a build is valid according to item constraints.
+    Returns True if valid, False if invalid.
+    """
+    for constraint_group in ITEM_CONSTRAINTS.values():
+        count = sum(1 for item in combo if item in constraint_group["items"])
+        if count > constraint_group["max"]:
+            return False
+    return True
 # ============================================================
 # Weapon Damage Factors (synergy factors)
 # ============================================================
@@ -242,18 +262,24 @@ WEAPON_DAMAGE_FACTORS = {
 # ============================================================
 def apply_physical_mitigation(damage, enemy_armor, armor_pen=0.0, lethality=0.0):
     """
-    Apply damage mitigation with enemy armor adjusted by % armor pen and flat lethality.
-    - armor_pen should be in decimal form (e.g. 0.40 for 40% armor pen).
-    - lethality is subtracted flat from the enemy armor.
+    Applies armor penetration in correct order:
+    1. Lethality
+    2. Percentage penetration
+    Returns final damage after mitigation
     """
-    # Adjust enemy armor using % armor pen and flat lethality.
-    effective_armor = max(0, enemy_armor * (1 - armor_pen) - lethality)  # Armor cannot go negative
-    if effective_armor >= 0:
-        multiplier = 100 / (100 + effective_armor)
+    # Convert lethality to flat pen at level 18
+    flat_pen = lethality * (0.6 + 0.4)  # Simplified for level 18
+    
+    # Apply penetration in correct order
+    armor_after_flat = max(0, enemy_armor - flat_pen)
+    final_armor = max(0, armor_after_flat * (1 - armor_pen))
+    
+    if final_armor >= 0:
+        multiplier = 100 / (100 + final_armor)
     else:
-        multiplier = 2 - 100 / (100 - effective_armor)
+        multiplier = 2 - 100 / (100 - final_armor)
+    
     return damage * multiplier
-
 # ============================================================
 # Aphelios Simulator
 # ============================================================
@@ -271,6 +297,10 @@ class ApheliosSimulator:
         self.time = 0.0  # Simulation time in seconds
         self.ability_cooldown = 0.0
         self.weapon_ammo = {w: 50 for w in WEAPONS}
+        self.chakram_stacks = 0
+        self.active_chakrams = set()
+        self.crescendum_return_times = {}
+        self.active_marks = {}
 
     @functools.lru_cache(maxsize=128)
     def _calculate_base_stats(self, items_tuple):
@@ -313,7 +343,6 @@ class ApheliosSimulator:
                     continue
                 if stat in ["ArmorPen", "Armor Pen"]:  # Pick highest % Armor Pen
                     stats["ArmorPen"] = max(stats["ArmorPen"], float(value))
-                    continue
                 if stat == "Lethality":  # Lethality stacks
                     stats["Lethality"] += float(value)
                     continue
@@ -331,6 +360,7 @@ class ApheliosSimulator:
 
         stats["BonusAD"] = bonus_ad
         stats["AD"] += bonus_ad
+        stats["AD"] += 68  # Aphelios gains +68 AD at level 18 from his passive
 
         # Cap crit chance at 100%
         stats["Crit"] = min(stats["Crit"], 1.0)
@@ -339,16 +369,20 @@ class ApheliosSimulator:
         if has_infinity_edge and stats["Crit"] >= 0.6:
             stats["CritDmg"] += 0.4
 
+
         return stats
 
-
-    def calculate_dps(self, duration=10):
+    def calculate_dps(self, duration=100):
         total_damage = 0.0
+        
         while self.time < duration:
             if self.weapon_ammo[self.main_hand.name] <= 0:
                 self.rotate_weapon()
             
-            attack_time = 1.0 / self.stats["AS"]
+            # Calculate attack speed with proper bounds
+            attack_speed = min(3, BASE_AS * (1 + self.stats.get("AS", 0)))
+            attack_time = 1.0 / attack_speed
+            
             total_damage += self.simulate_attack()
             self.time += attack_time
             
@@ -356,13 +390,11 @@ class ApheliosSimulator:
                 total_damage += self.simulate_ability()
                 self.ability_cooldown = self.time + ABILITY_CAST_TIME
                 self.time += ABILITY_CAST_TIME
-                
-            # Stop simulation if no ammo remains for all weapons
-            if all(ammo <= 0 for ammo in self.weapon_ammo.values()):
-                break
+        
+        if all(ammo <= 0 for ammo in self.weapon_ammo.values()):
+            self.rotate_weapon()
         
         return total_damage / duration if duration > 0 else 0
-
 
     def simulate_attack(self):
         if self.weapon_ammo[self.main_hand.name] <= 0:
@@ -373,25 +405,46 @@ class ApheliosSimulator:
         
         base_ad = BASE_AD_LEVEL18
         bonus_ad = self.stats["BonusAD"]
-        total_ad = base_ad + bonus_ad
+        total_ad = base_ad + bonus_ad + 68  # Level 18 passive AD
         
-        base_damage = total_ad * self.stats["AS"]
+        # Calculate attack speed with 2.5 cap
+        attack_speed = min(2.5, BASE_AS * (1 + self.stats.get("AS", 0)))
+        base_damage = total_ad
         
+        # Apply crit
         if random.random() < self.stats["Crit"]:
             crit_multiplier = self.stats["CritDmg"]
             damage = base_damage * crit_multiplier
         else:
             damage = base_damage
 
+        # Apply weapon modifier
         weapon_modifier = self.main_hand.base_damage_mod[0]
         damage *= weapon_modifier
         
-        adjusted_armor = self.enemy_armor * (1 - self.stats["ArmorPen"])
+        # Add weapon-specific effects
+        if self.main_hand.name == "Calibrum":
+            mark_damage = total_ad * 0.15  # 15% AD mark damage
+            damage += mark_damage
+        elif self.main_hand.name == "Severum":
+            # Healing calculated but doesn't affect damage
+            self.stats["LS"] += damage * 0.03
+        elif self.main_hand.name == "Infernum":
+            splash_damage = total_ad * 0.75  # 75% AD splash
+            damage += splash_damage
+        
+        if self.main_hand.name == "Crescendum":
+            base_damage = total_ad * (0.1385 * self.chakram_stacks)  # Bonus damage only
+            self.chakram_stacks = max(0, self.chakram_stacks - 3)
+        elif self.off_hand.name == "Crescendum":  # Only generate when off-hand
+            if random.random() < 0.65:  # Actual 65% chance from PDF
+                self.chakram_stacks = min(20, self.chakram_stacks + 1)
+       
         effective_damage = apply_physical_mitigation(
             damage,
             self.enemy_armor,
-            max(self.stats.get("ArmorPen", 0.0), 0.0),  # Use only the highest % Armor Pen
-            self.stats.get("Lethality", 0.0)  # Lethality always stacks
+            self.stats.get("ArmorPen", 0.0),
+            self.stats.get("Lethality", 0.0)
         )
 
         return effective_damage
@@ -401,42 +454,63 @@ class ApheliosSimulator:
         if self.weapon_ammo[self.main_hand.name] <= 0:
             self.rotate_weapon()
         
-        # Abilities consume more ammo
-        self.use_ammo(10)  # Adjust this value based on Aphelios' ability mechanics
+        self.use_ammo(10)
         
-        total_ad = self.stats["AD"]
+        total_ad = BASE_AD_LEVEL18 + self.stats["BonusAD"] + 68  # Level 18 passive AD
         weapon = self.main_hand.name
         
         raw_ability_damage = total_ad * WEAPONS[weapon].base_damage_mod[1]
-
-        ability_effects = WEAPONS[weapon].ability_effect
-        if "execute" in ability_effects:
-            raw_ability_damage *= (1 + ability_effects["execute"])
-        if "lifesteal_boost" in ability_effects:
-            raw_ability_damage *= (1 + ability_effects["lifesteal_boost"])
         
-        return apply_physical_mitigation(
-                        raw_ability_damage, 
-                        self.enemy_armor, 
-                        self.stats.get("ArmorPen", 0.0), 
-                        self.stats.get("Lethality", 0.0)
-                    )
-
+        # Apply weapon-specific ability effects
+        ability_effects = WEAPONS[weapon].ability_effect
+        if weapon == "Calibrum":
+            if "execute" in ability_effects:
+                raw_ability_damage *= (1 + ability_effects["execute"])
+        elif weapon == "Severum":
+            if "lifesteal_boost" in ability_effects:
+                raw_ability_damage *= (1 + ability_effects["lifesteal_boost"])
+                self.stats["LS"] += raw_ability_damage * 0.03
+        elif weapon == "Infernum":
+            if "splash" in ability_effects:
+                raw_ability_damage *= (1 + ability_effects["splash"])
+                raw_ability_damage *= 1.25  # AOE bonus
+        if self.main_hand.name == "Crescendum":
+            # Sentry generates temporary Chakrams
+            self.active_chakrams.add(self.time + 5.0)
+        
+        # Update Chakram stack count from active durations
+        self.chakram_stacks = len([t for t in self.active_chakrams if t > self.time])
+        
+        effective_damage = apply_physical_mitigation(
+            raw_ability_damage,
+            self.enemy_armor,
+            self.stats.get("ArmorPen", 0.0),
+            self.stats.get("Lethality", 0.0)
+        )
+        
+        return effective_damage
 
     def use_ammo(self, amount=1):
-        """Consumes ammo and rotates weapons when needed"""
         self.weapon_ammo[self.main_hand.name] -= amount
         if self.weapon_ammo[self.main_hand.name] <= 0:
             self.rotate_weapon()
 
     def rotate_weapon(self):
-        """Moves the main hand weapon to the back of the queue"""
-        self.weapon_queue.rotate(-1)
+        # Proper rotation delay from PDF
+        self.time += 1.0  # 1 second assembly time
+        self.ability_cooldown = max(self.ability_cooldown, self.time + 1.5)
+
+        # Move exhausted weapon to end of queue
+        exhausted = self.weapon_queue.popleft()
+        self.weapon_queue.append(exhausted)
+        
+        # Update current weapons
         self.main_hand = WEAPONS[self.weapon_queue[0]]
         self.off_hand = WEAPONS[self.weapon_queue[1]]
-         # Reset weapon ammo when it cycles back in
-        if self.weapon_ammo[self.main_hand.name] <= 0:
-            self.weapon_ammo[self.main_hand.name] = 50
+
+        # Crescendum stack preservation
+        if exhausted == "Crescendum":
+            self.chakram_stacks = int(self.chakram_stacks * 0.7)
 # ============================================================
 # Chunking Helper Function
 # ============================================================
@@ -496,11 +570,16 @@ def simulate_build_chunk(builds, simulation_duration, enemy_armor, enemy_health)
         results.append(result)
     return results
 
-def optimize_aphelios_build(simulation_duration=120, enemy_armor=150, enemy_health=2500, chunk_size=500):
-    item_combos = list(itertools.combinations(ITEMS.keys(), 5))
+def optimize_aphelios_build(simulation_duration=300, enemy_armor=150, enemy_health=2500, chunk_size=500):
+    # Generate only valid item combinations
+    item_combos = [
+        combo for combo in itertools.combinations(ITEMS.keys(), 5)
+        if is_valid_build(combo)
+    ]
+    
     chunks = list(chunkify(item_combos, chunk_size))
     all_results = []
-    print(f"Testing {len(item_combos)} builds in {len(chunks)} chunks.")
+    print(f"Testing {len(item_combos)} valid builds in {len(chunks)} chunks.")
 
     with concurrent.futures.ProcessPoolExecutor(max_workers=os.cpu_count()) as executor:
         futures = [
@@ -511,7 +590,6 @@ def optimize_aphelios_build(simulation_duration=120, enemy_armor=150, enemy_heal
             all_results.extend(future.result())
 
     return sorted(all_results, key=lambda x: (-x[1], -x[2]))
-
 if __name__ == "__main__":
     top_builds = optimize_aphelios_build()
     print("Top Aphelios Builds:")
