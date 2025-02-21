@@ -224,7 +224,7 @@ ITEMS = {
 
 ITEM_CONSTRAINTS = {
     "last_whisper": {
-        "items": ["Lord Dominik's Regards", "Serylda's Grudge", "Mortal Reminder"],
+        "items": ["Lord Dominik's Regards", "Serylda's Grudge", "Mortal Reminder","Black Cleaver"],
         "max": 1
     },
     "lifeline": {
