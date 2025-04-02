@@ -212,7 +212,6 @@ ITEMS = {
     "Serylda's Grudge": {"AD": 45.0, "Ability Haste": 20.0, "ArmorPen": 0.30, "Slow": 0.30, "name": "Serylda's Grudge"},
     "Statikk Shiv": {"AD": 45.0, "Attack Speed": 0.30, "MoveSpeed": 0.04, "MagicDamage": 60.0, "name": "Statikk Shiv"},
     "Sterak's Gage": {"Health": 400.0, "Tenacity": 0.20, "BonusAD": 0.45, "name": "Sterak's Gage"},
-    "Sundered Sky": {"AD": 40.0, "Ability Haste": 10.0, "Health": 400.0, "CritDamage": 1.75, "HealMissingHealth": 0.06, "name": "Sundered Sky"},
     "Terminus": {"AD": 30.0, "Attack Speed": 0.35, "OnHitMagicDamage": 30.0, "ArmorMRPerStack": (6.0, 7.0, 8.0), "ArmorPenMagicPenPerStack": 0.10, "name": "Terminus"},
     "The Collector": {"AD": 50.0, "Lethality": 10.0, "Crit Chance": 0.25, "Execute": 0.05, "name": "The Collector"},
     "Trinity Force": {"AD": 36.0, "Ability Haste": 15.0, "Attack Speed": 0.30, "Health": 333.0, "SpellbladeDamage": 2.0, "name": "Trinity Force"},
@@ -264,9 +263,9 @@ WEAPON_DAMAGE_FACTORS = {
 #    effective_damage = raw_damage * (2 - 100 / (100 - armor)) if armor < 0
 # ============================================================
 def apply_physical_mitigation(damage, enemy_armor, armor_pen=0.0, lethality=0.0):
-    # Apply in order: % penetration then lethality
-    final_armor = enemy_armor * (1 - armor_pen)  # Apply % penetration
-    final_armor = max(0, final_armor - lethality)  # Apply lethality
+    level = 18
+    lethality_scaled = lethality * (0.6 + 0.4 * (level / 18))
+    final_armor = max(0, (enemy_armor * (1 - armor_pen)) - lethality_scaled)
     if final_armor >= 0:
         multiplier = 100 / (100 + final_armor)
     else:
@@ -351,7 +350,7 @@ class ApheliosSimulator:
                         stats[stat] = stats.get(stat, 0.0) + float(value)
 
         stats["BonusAD"] = bonus_ad
-        stats["AD"] += bonus_ad  # Base AD (94.1) already includes passive - no extra +68
+        stats["AD"] += BASE_AD_LEVEL18+bonus_ad 
 
         # Cap crit chance at 100%
         stats["Crit"] = min(stats["Crit"], 1.0)
@@ -389,56 +388,78 @@ class ApheliosSimulator:
     def simulate_attack(self):
         if self.weapon_ammo[self.main_hand.name] <= 0:
             self.rotate_weapon()
-        
         self.use_ammo(1)
-        
-        base_ad = BASE_AD_LEVEL18
+
+        # True damage execute (15% target health)
+        target_health = self.enemy.health
+
+        # Calculate total AD (base + items)
+        base_ad = BASE_AD_LEVEL18  
         bonus_ad = self.stats["BonusAD"]
-        total_ad = BASE_AD_LEVEL18 + self.stats["BonusAD"]
-        
-        attack_speed = min(2.5, BASE_AS * (1 + self.stats.get("AS", 0)))
-        base_damage = total_ad
-        
+        total_ad = base_ad + bonus_ad
+
+        # Calculate damage components
+        physical_damage = 0.0
+        magic_damage = 0.0
+        true_damage = 0.0
+
+        # Base physical damage
+        physical_damage += total_ad * self.main_hand.base_damage_mod[0]
+
+        # Weapon-specific effects
+        if self.main_hand.name == "Calibrum":
+            physical_damage += 110  # Fixed mark damage
+        elif self.main_hand.name == "Infernum":
+            execute_damage = min(target_health * 0.15, target_health)
+            true_damage += execute_damage
+            physical_damage += total_ad * 0.75
+        elif self.main_hand.name == "Crescendum":
+            # Bonus magic damage from chakrams
+            magic_damage += self.chakram_stacks * 10  
+
+        # Apply crits (physical damage only)
         if random.random() < self.stats["Crit"]:
             crit_multiplier = self.stats["CritDmg"]
-            damage = base_damage * crit_multiplier
-        else:
-            damage = base_damage
+            physical_damage *= crit_multiplier
 
-        weapon_modifier = self.main_hand.base_damage_mod[0]
-        damage *= weapon_modifier
-        
-        if self.main_hand.name == "Calibrum":
-            damage += 110
-        elif self.main_hand.name == "Severum":
-            self.stats["LS"] += damage * 0.03
-        elif self.main_hand.name == "Infernum":
-            splash_damage = total_ad * 0.75  # 75% AD splash
-            damage += splash_damage
-        
-        if self.main_hand.name == "Crescendum":
-            base_damage = total_ad * (0.1385 * self.chakram_stacks)  # Bonus damage only
-            self.chakram_stacks = max(0, self.chakram_stacks - 3)
-        elif self.off_hand.name == "Crescendum":
-            if random.random() < 0.65:
-                self.chakram_stacks = min(20, self.chakram_stacks + 1)
-    
-        effective_damage = apply_physical_mitigation(
-            damage,
-            self.enemy_armor,
-            self.stats.get("ArmorPen", 0.0),
-            self.stats.get("Lethality", 0.0)
+        # Apply on-hit effects
+        for item in self.item_stats:
+            if "OnHitMagicDamage" in item:
+                magic_damage += item["OnHitMagicDamage"]
+            if "Cleave" in item:
+                physical_damage += physical_damage * item["Cleave"]
+
+        # Mitigation
+        physical_damage = apply_physical_mitigation(
+            physical_damage,
+            self.enemy.armor,
+            self.stats["ArmorPen"],
+            self.stats["Lethality"]
         )
+        # magic_damage = apply_magic_mitigation(
+        #     magic_damage,
+        #     self.enemy.mr,
+        #     self.stats["MagicPen"]
+        # )
 
-        return effective_damage
+        total_damage = physical_damage + magic_damage + true_damage
+        return total_damage
+
     
+    def _calculate_attack_speed(self, level=18):
+        bonus_as = sum(item.get("Attack Speed", 0) for item in self.item_stats)
+        stat_increase = 0.02 * (0.65 + 0.035 * level)
+        attack_speed = 0.625 + (bonus_as + stat_increase) * 0.7
+        return min(attack_speed, 2.5)
+
+
     def simulate_ability(self):
         if self.weapon_ammo[self.main_hand.name] <= 0:
             self.rotate_weapon()
         
         self.use_ammo(10)
         
-        total_ad = BASE_AD_LEVEL18 + self.stats["BonusAD"] + 68  # Level 18 passive AD
+        total_ad = BASE_AD_LEVEL18 + self.stats["BonusAD"]
         weapon = self.main_hand.name
         
         raw_ability_damage = total_ad * WEAPONS[weapon].base_damage_mod[1]
@@ -473,6 +494,7 @@ class ApheliosSimulator:
         self.weapon_ammo[self.main_hand.name] -= amount
         if self.weapon_ammo[self.main_hand.name] <= 0:
             self.rotate_weapon()
+
     def rotate_weapon(self):
         # Proper rotation delay from PDF
         self.time += ROTATION_DELAY 
@@ -485,10 +507,10 @@ class ApheliosSimulator:
         # Update current weapons
         self.main_hand = WEAPONS[self.weapon_queue[0]]
         self.off_hand = WEAPONS[self.weapon_queue[1]]
-
-        # Crescendum stack preservation
-        if exhausted == "Crescendum":
-            self.chakram_stacks = int(self.chakram_stacks * 0.7)
+        
+        #chakram interaction
+        self.chakram_stacks = int(self.chakram_stacks * 0.7)  # 30% loss
+        self.time += ROTATION_DELAY
 
 # ============================================================
 # Chunking Helper Function
