@@ -27,7 +27,7 @@ import os
 
 # Base champion stats from research
 BASE_AD_LEVEL18 = 94.1
-BASE_AS = 0.64
+BASE_AS = 0.658
 DEFAULT_CRIT_DAMAGE = 1.75  # 175% crit damage
 BASE_HEALTH = 2334
 BASE_MANA = 1062
@@ -44,6 +44,7 @@ ROTATION_DELAY = 0.3
 # ============================================================
 # Weapon Synergy Multipliers (based on official mechanics)
 # ============================================================
+
 WEAPON_SYNERGIES = {
     ("Calibrum", "Severum"): {
         "description": "Long-range sustain",
@@ -127,9 +128,7 @@ WEAPON_SYNERGIES = {
     }
 }
 
-# ============================================================
 # Weapon Definitions
-# ============================================================
 class MoonstoneWeapon:
     """
     Represents a Moonstone weapon for Aphelios.
@@ -147,8 +146,8 @@ WEAPONS = {
         name="Calibrum",
         moonlight=50,
         base_damage_mod=(1.0, 0.2),
-        on_hit_effect={"range": 650, "mark": True},
-        ability_effect={"execute": 0.10}
+        on_hit_effect={"range": 650, "mark_damage": 110},
+        ability_effect={"execute": 0.15}
     ),
     "Severum": MoonstoneWeapon(
         name="Severum",
@@ -196,7 +195,7 @@ ITEMS = {
     "Hubris": {"AD": 60.0, "Ability Haste": 10.0, "Lethality": 18.0, "BonusADPerStack": 15.0, "name": "Hubris"},
     "Hullbreaker": {"AD": 40.0, "Health": 500.0, "MoveSpeed": 0.04, "BonusArmorMR": (70.0, 130.0), "name": "Hullbreaker"},
     "Immortal Shieldbow": {"AD": 55.0, "Crit Chance": 0.25, "Shield": (400.0, 700.0), "Lifesteal": 0.07, "name": "Immortal Shieldbow"},
-    "Infinity Edge": {"AD": 70.0, "Crit Chance": 0.25, "Crit Damage": 0.40, "name": "Infinity Edge"},
+    "Infinity Edge": {"AD": 70.0, "Crit Chance": 0.25, "CritDamage": 0.40, "name": "Infinity Edge"},
     "Kraken Slayer": {"AD": 45.0, "Attack Speed": 0.40, "MoveSpeed": 0.04, "BonusPhysicalDamage": (150.0, 200.0), "name": "Kraken Slayer"},
     "Lord Dominik's Regards": {"AD": 35.0, "ArmorPen": 0.40, "Crit Chance": 0.25, "name": "Lord Dominik's Regards"},
     "Maw of Malmortius": {"AD": 60.0, "Ability Haste": 15.0, "MR": 40.0, "Shield": (200.0, 150.0), "Omnivamp": 0.10, "name": "Maw of Malmortius"},
@@ -219,7 +218,9 @@ ITEMS = {
     "Trinity Force": {"AD": 36.0, "Ability Haste": 15.0, "Attack Speed": 0.30, "Health": 333.0, "SpellbladeDamage": 2.0, "name": "Trinity Force"},
     "Voltaic Cyclosword": {"AD": 55.0, "Ability Haste": 10.0, "Lethality": 18.0, "Slow": 0.99, "BonusPhysicalDamage": 100.0, "name": "Voltaic Cyclosword"},
     "Wit's End": {"MR": 45.0, "Attack Speed": 0.50, "Tenacity": 0.20, "OnHitMagicDamage": 45.0, "name": "Wit's End"},
-    "Youmuu's Ghostblade": {"AD": 55.0, "Lethality": 18.0, "MoveSpeedOutOfCombat": (20.0, 10.0), "name": "Youmuu's Ghostblade"}
+    "Youmuu's Ghostblade": {"AD": 55.0, "Lethality": 18.0, "MoveSpeedOutOfCombat": (20.0, 10.0), "name": "Youmuu's Ghostblade"},
+    "Sundered sky":{"AD":40,"Ability Haste":10,"Health":400,"CritDamage": 0.75, "HealMissingHealth":0.06, "name":"Sundered sky"}
+ 
 }
 
 ITEM_CONSTRAINTS = {
@@ -263,21 +264,13 @@ WEAPON_DAMAGE_FACTORS = {
 #    effective_damage = raw_damage * (2 - 100 / (100 - armor)) if armor < 0
 # ============================================================
 def apply_physical_mitigation(damage, enemy_armor, armor_pen=0.0, lethality=0.0):
-    """
-    Applies armor penetration in correct order:
-    1. Percentage Penetration
-    2. Lethality
-    Returns final damage after mitigation
-    """
-   
-    # Apply penetration in correct order
-    final_armor = max(0,((enemy_armor*(1-armor_pen))-lethality)) # percentage pen comes first, then lethality. also since sometime in s14 lethality no longer scales and is just the full value starting lvl1 - ueberheblichkeit
-    
+    # Apply in order: % penetration then lethality
+    final_armor = enemy_armor * (1 - armor_pen)  # Apply % penetration
+    final_armor = max(0, final_armor - lethality)  # Apply lethality
     if final_armor >= 0:
         multiplier = 100 / (100 + final_armor)
     else:
         multiplier = 2 - 100 / (100 - final_armor)
-    
     return damage * multiplier
 
 # ============================================================
@@ -307,11 +300,11 @@ class ApheliosSimulator:
         items = list(items_tuple)
         stats = {
             "AD": BASE_AD_LEVEL18,
-            "AS": BASE_AS,
+            "AS": 0.658,  # Updated from 0.64 to 0.658 (V25.05)
             "Crit": 0.0,
             "CritDmg": DEFAULT_CRIT_DAMAGE,
             "Lethality": 0.0,
-            "ArmorPen": 0.0,  # % Armor Penetration (Only highest value applies)
+            "ArmorPen": 0.0,  # % Armor Penetration (only highest value applies)
             "MagicPen": 0.0,
             "OnHit": 0.0,
             "LS": 0.0,
@@ -331,43 +324,41 @@ class ApheliosSimulator:
 
         for item in self.item_stats:
             for stat, value in item.items():
-                if stat == "name":
+                if stat == "CritDamage":
+                    stats["CritDmg"] += float(value)  # Handle crit damage items
+                elif stat == "name":
                     if value == "Infinity Edge":
                         has_infinity_edge = True
                     continue
-                if stat == "Crit Chance":
+                elif stat == "Crit Chance":
                     stats["Crit"] += float(value)
                     continue
-                if stat == "AD":
+                elif stat == "AD":
                     bonus_ad += float(value)
                     continue
-                if stat in ["ArmorPen", "Armor Pen"]:  # Pick highest % Armor Pen
+                elif stat in ["ArmorPen", "Armor Pen"]:
                     stats["ArmorPen"] = max(stats["ArmorPen"], float(value))
-                if stat == "Lethality":  # Lethality stacks
+                elif stat == "Lethality":
                     stats["Lethality"] += float(value)
                     continue
-                if isinstance(value, tuple):
-                    try:
-                        stats[stat] = stats.get(stat, 0.0) + sum(float(v) for v in value) / len(value)
-                    except (ValueError, TypeError):
-                        continue
-                elif isinstance(value, (int, float)):
-                    stats[stat] = stats.get(stat, 0.0) + float(value)
-                elif isinstance(value, bool):
-                    continue
                 else:
-                    print(f"Warning: Unexpected type for item {item.get('name', 'N/A')}, stat {stat}. Skipping.")
+                    if isinstance(value, tuple):
+                        try:
+                            stats[stat] = stats.get(stat, 0.0) + sum(float(v) for v in value) / len(value)
+                        except (ValueError, TypeError):
+                            continue
+                    elif isinstance(value, (int, float)):
+                        stats[stat] = stats.get(stat, 0.0) + float(value)
 
         stats["BonusAD"] = bonus_ad
-        stats["AD"] += bonus_ad
-        stats["AD"] += 68  # Aphelios gains +68 AD at level 18 from his passive
+        stats["AD"] += bonus_ad  # Base AD (94.1) already includes passive - no extra +68
 
         # Cap crit chance at 100%
         stats["Crit"] = min(stats["Crit"], 1.0)
 
-        # Apply Infinity Edge bonus if applicable
-        if has_infinity_edge: # 60% requirement is no longer in the game - ueberheblichkeit
-            stats["CritDmg"] += 0.4 
+        # Apply Infinity Edge bonus (40% crit damage)
+        if has_infinity_edge:
+            stats["CritDmg"] += 0.4
 
         return stats
 
@@ -403,7 +394,7 @@ class ApheliosSimulator:
         
         base_ad = BASE_AD_LEVEL18
         bonus_ad = self.stats["BonusAD"]
-        total_ad = base_ad + bonus_ad + 68  # Level 18 passive AD
+        total_ad = BASE_AD_LEVEL18 + self.stats["BonusAD"]
         
         attack_speed = min(2.5, BASE_AS * (1 + self.stats.get("AS", 0)))
         base_damage = total_ad
@@ -418,8 +409,7 @@ class ApheliosSimulator:
         damage *= weapon_modifier
         
         if self.main_hand.name == "Calibrum":
-            mark_damage = total_ad * 0.15  # 15% AD mark damage
-            damage += mark_damage
+            damage += 110
         elif self.main_hand.name == "Severum":
             self.stats["LS"] += damage * 0.03
         elif self.main_hand.name == "Infernum":
@@ -485,7 +475,7 @@ class ApheliosSimulator:
             self.rotate_weapon()
     def rotate_weapon(self):
         # Proper rotation delay from PDF
-        self.time += 1.0  # 1 second assembly time
+        self.time += ROTATION_DELAY 
         self.ability_cooldown = max(self.ability_cooldown, self.time + 1.5)
 
         # Move exhausted weapon to end of queue
