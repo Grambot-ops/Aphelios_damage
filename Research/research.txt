@@ -1,0 +1,3223 @@
+Marksman
+< Champion classes
+For information about
+the archaic term, see
+ADC.
+Marksmen are ranged
+champions whose power
+almost exclusively revolves
+around their basic attacks:
+using their reach to land
+massive continuous damage
+from a distance, marksmen
+are capable of taking down
+even the toughest of
+opponents when positioned
+behind the safety of their
+team, and excel at securing
+map objectives such as
+Dragon, Baron Nashor
+and turrets.
+Marksmen are tremendously
+vulnerable to burst damage,
+due to their fragility, and tend
+to be exceptionally weak early
+in the game, requiring high
+amounts of gold, mostly via
+minion kills (or CS: Creep
+Score) to acquire powerful,
+but expensive, damage‐
+focused items. Due to their
+potent reach and DPS,
+marksmen are particularly
+strong against more durable
+opponents, namely fighters
+and tanks, but fall quickly to
+the burst damage of
+Marksman
+Strengths Sustained Damage, Range
+Weaknesses Crowd control, Burst,
+Mobility
+Averages
+Marksman | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Champion_classes/Marksman
+1 of 2 02/04/2025, 14:09
+[hide]
+assassins and mages.
+Akshan
+Aphelios
+Ashe
+Caitlyn
+Corki
+Draven
+Ezreal
+Jhin
+Jinx
+Kai'Sa
+Kalista
+Kindred
+Kog'Maw
+Lucian
+Miss Fortune
+Samira
+Senna
+Sivir
+Smolder
+Teemo
+Tristana
+Twitch
+Varus
+Vayne
+Xayah
+Zeri
+Champion attributes
+Classes
+ · · · ·
+ · ·
+List of champion classes
+Lanes
+ · · · ·
+ ·
+List of champion positions
+Advanced
+attributes
+ · · · ·
+ · · · ·
+ ·
+Retrieved from "https://wiki.leagueoflegends.com/en-us/Champion_classes/Marksman?
+oldid=3818327"
+This page was last edited on 20 November 2024, at 07:17.
+Content on this site is licensed under CC BY-SA 3.0; additional terms may apply.
+References
+Controller Fighter Mage Marksman
+Slayer Specialist Tank
+Top Jungle Middle Bottom
+Support Unplayed
+Roamer Melee Ranged Mana
+Manaless Fury Energy Heat
+Flow Stealth
+Marksman | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Champion_classes/Marksman
+2 of 2 02/04/2025, 14:09
+
+Aphelios
+GAMEPLAY COLLECTION AUDIO PATCH HISTORY
+PAST VERSIONS
+Aphelios is a champion in
+League of Legends.[1]
+APHELIOS
+THE WEAPON OF THE FAITHFUL
+Release date 2019‐12‐11
+Last changed V25.05
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+1 of 27 02/04/2025, 14:09
+Class(es)
+Legacy
+Position(s)
+Resource
+Range type
+Adaptive type Physical
+Store price 2400 | 880
+Crafting + 2880
+Ratings
+Style
+Difficulty
+Marksman
+Marksman
+Bottom
+Mana
+Ranged
+Level: 18 Base statistics Edit
+Health
+2334
+Mana
+1062
+Health regen. (per
+5s)
+12.6
+Mana regen. (per
+5s)
+13.3
+Armor
+97.4
+Attack damage
+94.1
+Magic resist.
+52.1
+Crit. damage
+175%
+Move. speed
+325
+Attack range
+550
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+2 of 27 02/04/2025, 14:09
+ Attack speed
+Base AS
+0.64 15.333%
+0.658
+Bonus AS
+35.7%
+Unit radius
+65 110
+35 140
+750
+ Special statistics
+ARAMNexus Blitz
+One For AllUltra Rapid Fire
+Ultimate SpellbookArena
+Attack windup
+AS ratio
+Gameplay radius Select radius
+Pathing radius Select height
+Acq. radius
+Swiftplay
+Abilities
+The Hitman and the Seer
+INNATE: Aphelios has access to an arsenal of 5 Moonstone
+Weapons, created by his sister Alune. He equips two
+weapons at any one time, one as his main weapon and one
+as his off‐hand. Each weapon has a unique basic attack and
+passive effect.
+Aphelios begins the game with Calibrum as his main weapon and
+Severum in his off‐hand, with Gravitum, Infernum, and
+Crescendum queued in reserve. The queue order can be rearranged
+based on weapon usage.
+INNATE ‐ MOONLIGHT: Weapons spawn with 50 Moonlight for
+ammunition, which is consumed on basic attacks
+or to cast his abilities. Abilities that cause Aphelios to
+attack do not cost additional Moonlight on top of their ability cost. Once
+his main weapon is exhausted of Moonlight, it is moved to the end of
+the queue and Aphelios assembles his next available weapon over 1
+on‐attack
+Edit
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+3 of 27 02/04/2025, 14:09
+Hide Details Map‐Specific Differences
+second to equip it from his reserve, with its ability being placed on a
+1.5‐second cooldown before that time. Aphelios cannot cast
+Phase during the assembly.
+INNATE ‐ WEAPON MASTER: Aphelios cannot improve his abilities with skill
+points. He starts the game with Phase and gains access to
+abilities at level 2 and Moonlight Vigil at level 6, with the latter
+improving automatically at levels 11 and 16. Instead, Aphelios may
+spend his skill points to gain bonus attack damage,
+bonus attack speed or lethality.
+5 / 10 / 15 / 20 / 25 / 30
+9 / 18 / 27 / 36 / 45 / 54%
+5.5 / 11 / 16.5 / 22 / 27.5 / 33
+"This will be your voice."
+BONUS ATTACK DAMAGE:
+BONUS ATTACK SPEED:
+LETHALITY:
+Weapons of the Faithful
+The active effect of Aphelios' varies based on his current
+main weapon.
+The individual actives do not share a cooldown.
+Edit
+Calibrum, the Sniper Riflflee
+Aphelios gains 100 bonus attack range while Calibrum is
+his main weapon. Enemies damaged by Calibrum through an
+ability are marked for 4.5 seconds, them for the
+duration. Aphelios' next basic attack against a marked target
+uses the current off‐hand weapon and has 1800 range,
+increased missile speed, and a brief cast time that lasts shorter based
+on Aphelios' proximity to the target.
+The empowered attack will consume the marks from all targets, dealing
+15 (+ 20% bonus AD) bonus physical damage to the main target for each
+revealing
+Edit  
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+4 of 27 02/04/2025, 14:09
+Calibrum DetailsMoonshot Details
+Map‐Specific Differences Video
+Hide
+mark consumed. If Calibrum is the current off‐hand weapon, the main
+weapon is used for the attack instead.
+"Calibrum."
+Moonshot
+ACTIVE: Aphelios fires a bolt of energy in the target direction
+that deals (+
+bonus AD) (+ 100% AP) physical damage to the first
+enemy hit.
+60 – 160 (based on level) 42% – 60% (based on
+level)
+Severum, the Scythe Pistol
+Basic attacks with Severum are and have an
+. Severum's attacks
+Aphelios for of the post‐mitigation
+damage dealt, increased to for
+attacks from abilities.
+Healing from Severum in excess of Aphelios' maximum health is
+converted into a for an amount of up to
+(+ 6% maximum health), lingering for up to 30 seconds.
+"Severum."
+non‐projectile
+uncancellable windup heal
+2% – 7.1% (based on level)
+5% – 17.75% (based on level)
+shield 10 – 140 (based on
+level)
+Onslaught
+ACTIVE: Aphelios enters an onslaught for 1.75 seconds, gaining
+20% (+ 10% per 100 AP) bonus movement speed and
+automatically performing up to 6 (+ 2 per 100% bonus attack
+speed) attacks over the duration against the nearest
+ enemy, prioritizing enemy .
+Attacks alternate between Severum and his current off‐hand weapon,
+each dealing (+
+bonus AD) physical damage, affected by modifiers, and
+applying effects, with on‐hit damage reduced to 25%
+visible champions
+10 – 40 (based on level) 22% – 40% (based on level)
+critical strike
+on‐hit
+Edit
+Edit
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+5 of 27 02/04/2025, 14:09
+Severum DetailsOnslaught Details
+Map‐Specific Differences Video
+Gravitum DetailsBinding Eclipse Details
+Map‐Specific Differences Video
+Hide
+Hide
+effectiveness.
+Aphelios cannot cast Phase nor Moonlight Vigil during
+Onslaught, but he is still able to move. He cannot perform attacks while
+unable to declare basic attacks.
+Gravitum, the Gravity Cannon
+Basic attacks with Gravitum enemies by 30% for 2.5
+seconds, decaying to 10% after 0.7 seconds.
+"Gravitum."
+slow
+Binding Eclipse
+GRAVITUM ‐ ACTIVE: Aphelios expunges all enemies with
+Gravitum's debuff, dealing
+(+ bonus AD) (+ 70% AP) magic
+damage and them for 1 second.
+Binding Eclipse also empowers in‐flight Gravitum projectiles to instantly
+affect their targets upon applying the slow successively.
+slow 50 – 140 (based on level)
+32% – 50% (based on level)
+rooting
+Edit
+Edit
+Infernum, the Flamethrower
+Basic attacks with Infernum shoot a fire bolt that upon arrival
+splits into a cone of 4 lesser bolts behind the target, dealing
+damage to enemies they pass through. The fire bolt deals
+110% AD physical damage to the primary target. Secondary
+targets hit by any bolt are dealt of
+the triggering attack's damage, reduced to
+75 / 100% (based on level)
+23 / 30% (based on level)
+Edit  
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+6 of 27 02/04/2025, 14:09
+Infernum DetailsDuskwave Details
+Map‐Specific Differences Video
+Hide
+against .
+ instead spray 6 missiles in a 50% wider cone.
+Secondary targets hit count as being but do not take
+any additional damage.
+"Infernum."
+minions
+Critical strikes
+critically struck
+Duskwave
+ACTIVE: Aphelios unleashes a wave of energy in a cone in the
+target direction, dealing (+
+bonus AD) (+ 70% AP) physical damage
+to all enemies hit and locking onto each of them. After 0.25
+seconds, Aphelios then fires a volley of attacks at each
+locked‐on target from his current off‐hand weapon, dealing 100% AD
+physical damage and applying effects. The damage is affected
+by modifiers. There is no range limit for locked‐on
+targets.
+25 – 65 (based on level) 56% –
+80% (based on level)
+on‐hit
+critical strike
+Crescendum, the Chakram
+Basic attacks with Crescendum hurl the blade at the target,
+which lingers for 0.25 seconds before homing back to
+Aphelios. He is unable to declare basic attacks until he
+retrieves Crescendum, but the attack timer is reset once
+caught.
+Whenever Aphelios casts an ability that would require him to
+throw Crescendum, he instead fires a spectral Chakram at
+the target that similarly returns to him. Aphelios accumulates
+the Chakrams he catches, up to 20, which last for 5 seconds
+or until Crescendum is depleted of Moonlight. Attacks with
+Crescendum against will refresh the duration of
+Chakrams.
+Basic attacks with Crescendum are empowered to deal
+ AD bonus physical damage and have a
+champions
+0% – 138.5%
+(based on number of Chakrams)
+Edit  
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+7 of 27 02/04/2025, 14:09
+Crescendum DetailsSentry Details
+Map‐Specific Differences Video
+Details Video
+Hide
+Hide
+10.67% percentage, decreased to 6.67% when
+. The bonus damage from Chakrams is affected by
+ modifiers.
+"Crescendum."
+wind up
+critically striking
+critical strike
+Sentry
+ACTIVE: Aphelios deploys a lunar sentry at the target location
+that arms after 0.35 seconds, lasting for up to 20 seconds,
+during which it is inactive and . The sentry
+activates if an enemy is within range of it, reducing its
+duration to 4 seconds and becoming targetable. Sentries
+have 6 health and take 3 damage per basic attack and 4
+damage per hit by abilities. attacks destroy sentries instantly.
+The sentry grants of its surroundings and autonomously attacks
+the nearest visible enemy in range with a replica of Aphelios' current off‐
+hand weapon, dealing (+
+bonus AD) (+ 50% AP) physical damage per hit. The sentry can
+ for (175% + 40%) damage and benefits from both
+Aphelios' attack speed and critical strike chance at 100%
+effectiveness.
+See Pets for more details about the sentry. Sentry will cast at max range
+if cast beyond that.
+untargetable
+ranged
+Turret
+sight
+35 – 125 (based on level) 42% – 60% (based on
+level)
+critically strike
+Phase
+ACTIVE: Aphelios switches between his main weapon and off‐
+hand weapon over 0.25 seconds.
+Edit
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+8 of 27 02/04/2025, 14:09
+Weapon Queue System
+The icon of this ability reflects the next weapon that is in reserve.
+ACTIVE: Aphelios receives a text prompt of the weapon Alune will create
+next.
+Edit
+Moonlight Vigil Edit
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+9 of 27 02/04/2025, 14:09
+Hide Details Video
+Pets
+Sentry
+Gravitum
+Infernum Severum
+Calibrum
+ACTIVE: Aphelios casts forth a lunar spotlight in the target
+direction that briefly grants of the area along its path
+and stops upon illuminating an enemy . Alune
+smites the area centered on the illuminated target, dealing
+(+ 20% bonus AD) (+ 100% AP) physical
+damage to enemy champions struck and locking‐on to each target hit,
+as well as granting of the area for 2 seconds.
+After 0.3 seconds of the illumination, attacks based on Aphelios' current
+main weapon will launch from the sky against each locked‐on target,
+dealing 100% AD physical damage and applying effects. These
+attacks can for (120% + 40%) damage. There is no
+range limit for locked‐on targets.
+CALIBRUM: Applies an empowered mark that deals
+bonus physical damage per mark consumed.
+SEVERUM: Aphelios for
+ if at least one enemy champion is hit.
+GRAVITUM: Increases the initial to 99% and
+empowers Binding Eclipse to targets affected by the
+enhanced slow for 1.35 seconds.
+INFERNUM: The initial blast deals
+(+ 25% bonus AD) bonus physical damage.「 The attack
+instead deals 110% AD physical damage against locked-on targets,
+and causes an explosion of bolts in a 400-radius circle that deals
+ AD physical damage to targets hit. 」
+Enemy champions will take damage from overlapping areas.
+CRESCENDUM: Generates 5 additional spectral Chakrams that
+return to Aphelios from the first enemy champion hit, for a total of
+6, on top of those from other targets hit.
+"I am with you!"
+sight
+champion
+125 / 175 / 225 (based on level)
+sight
+on‐hit
+critically strike
+50 / 80 /
+110 (based on level)
+Heals 250 / 350 / 450 (based on
+level)
+slow
+root
+50 / 100 / 150 (based on
+level)
+74.25 / 99% (based on level)
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+10 of 27 02/04/2025, 14:09
+Control type Autonomous (static)
+Target type
+On-hit effects Sentry's attacks are mitigated by , , but
+not .
+Calibrum
+Bounty
+Gold
+3333
+Exp
+0
+Statistics
+Health 6
+Attack damage (+
+bonus AD) (+ 50% AP)
+Attack speed 0.64
+Range 475
+Armor 0
+Magic resist 0
+Incoming
+damage modifier 3 damage from
+ranged basic
+attacks
+4 damage from
+abilities
+6 damage from
+turret basic attacks
+CC resist *
+•
+•
+•
+Move speed 0
+31 – 100 (based on level)
+40% – 60% (based on level)
+Cripple
+Silence
+Slow
+Root
+Minion
+block dodge
+blind
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+11 of 27 02/04/2025, 14:09
+Spell effects Sentry's basic attacks apply spell effects as
+.
+Weapon Replication
+Uses a copy of Aphelios' current off-hand weapon to fire at targets.
+Stat Modifier
+Attacks benefit from Aphelios' attack speed and critical strike
+chance.
+Critical Strike Modifier
+Attacks are able to .
+Passive Protection
+Gains while inactive. This is lost after becoming
+active.
+This article section only contains champion skins. For all associated
+collection items, see Aphelios (Collection).
+spell damage
+Abilities
+critically strike
+untargetability
+Champion skins
+Original 975 11.12.2019
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+12 of 27 02/04/2025, 14:09
+Emerging from moonlight’s shadow with weapons drawn, Aphelios kills the enemies of
+his faith in brooding silence—speaking only through the certainty of his aim, and the
+firing of each gun. Though fueled by a poison that renders him mute, he is guided by
+his sister Alune in her distant temple sanctuary from where she pushes an arsenal of
+moonstone weapons into his hands. For as long as the moon shines overhead, Aphelios
+will never be alone.
+N/A, Tania Gunadi Pan Chengwei Loot eligible
+View in 3D (https://www.modelviewer.lol/model-viewer?id=523000)
+For the expanded patch notes, see here.
+V25.05
+Stats
+Attack speed ratio increased to 0.658 from 0.64.
+V14.21
+Moonshot
+BUG FIX: Casting Binding Eclipse no longer causes the next
+Moonshot to clamp its targeting to the opposite direction of the
+selected one.
+V14.20
+Stats
+Base health increased to 600 from 580.
+The Hitman and the Seer
+Bonus attack damage increased to 5 / 10 / 15 / 20 / 25 / 30 from
+4.5 / 9 / 13.5 / 18 / 22.5 / 27.
+V14.14
+Onslaught
+Aphelios means "furthest from the sun".[2]
+It comes from Greek (https://en.wikipedia.org/wiki/Greek_language),
+"apo" means "far apart, away"[3] and "Helios" is the Titan god (http
+Patch history
+Trivia
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+13 of 27 02/04/2025, 14:09
+s://en.wikipedia.org/wiki/Helios) of the sun,[4] the latter element being
+shared with Aurelion Sol.
+In astronomy, "aphelion (https://en.wikipedia.org/wiki/Apsis#Perihelio
+n_and_aphelion)" means "the point in the orbit of an object where it
+is farthest from the Sun" also has the same origin.
+His sister's name Alune is possibly based on Latin (https://en.wikipedia.o
+rg/wiki/Latin) luna, which shares the same PIE root *lewk- as Lux
+and Lucian.[5]
+Aphelios and Alune are possibly inspired by the Sun and Moon
+twins (https://en.wikipedia.org/wiki/Proto-Indo-European_mythology#Su
+n_and_Moon) from Indo-European mythology (https://en.wikipedia.org/w
+iki/Proto-Indo-European_mythology); albeit that both twins belong to the
+Lunari order.
+Aphelios is the first champion that has less than four abilities.
+A unique HUD is used due to the unorthodox arrangement of his kit.
+Aphelios has a game start ceremony that forces him in place.
+Aphelios is the only champion in League of Legends who can obtain the
+highest amount of Lethality.
+Since Aphelios can hold two weapons at a time with The Hitman and
+the Seer, there are 10 different possible combinations of weapons he
+can have equipped. These are:
+Calibrum and Severum
+Calibrum and Gravitum
+Calibrum and Infernum
+Calibrum and Crescendum
+Severum and Gravitum
+Severum and Infernum
+Severum and Crescendum
+Gravitum and Infernum
+Gravitum and Crescendum
+Infernum and Crescendum
+Aphelios was associated with a meme known as '200 years' (https://ww
+w.youtube.com/watch?v=eeMBHy6j69E) that stemmed from a champion
+designer's controversial comments (https://twitter.com/Lutzburg/status/1
+215043827586588672) regarding game design experience. Despite the
+comment being in response to a conversation about Wukong, the
+meme has been affiliated with Aphelios because the comment was
+made shortly after Aphelios's release, because Aphelios's kit was
+complex in both visual clarity and mechanics, and because Aphelios
+was extraordinarily strong during his release.
+Aphelios's Series 2 Eternals make the following references:
+Perfectly Balanced is a reference to Thanos (https://marvelcinematic
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+14 of 27 02/04/2025, 14:09
+[show]
+universe.fandom.com/wiki/Thanos) from the Avengers: Infinity War
+(https://en.wikipedia.org/wiki/Avengers:_Infinity_War) MCU (https://e
+n.wikipedia.org/wiki/Marvel_Cinematic_Universe) superhero movie.
+League of Legends Wiki | Champions
+1. Aphelios's profile page (https://www.leagueoflegends.com/en-us/champi
+ons/aphelios/) at LeagueOfLegends.com (https://www.leagueoflegends.c
+om/en-us/)
+2. Aphelios name meaning (https://web.archive.org/web/0/https://boards.n
+a.leagueoflegends.com/en/c/story-art/yjig4POz-spoilers-zed-issue-nr-1-d
+iscussion?comment=0017)
+3. Beekes, R.S.P. Etymological Dictionary of Greek, p. 117
+4. Beekes, R.S.P. Etymological Dictionary of Greek, p. 516
+5. DeVaan, . Etymological Dictionary of Latin, p. 352
+Retrieved from "https://wiki.leagueoflegends.com/en-us/Aphelios?oldid=3854064"
+This page was last edited on 18 January 2025, at 19:16.
+Content on this site is licensed under CC BY-SA 3.0; additional terms may apply.
+See also
+References
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+15 of 27 02/04/2025, 14:09
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+16 of 27 02/04/2025, 14:09
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+17 of 27 02/04/2025, 14:09
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+18 of 27 02/04/2025, 14:09
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+19 of 27 02/04/2025, 14:09
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+20 of 27 02/04/2025, 14:09
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+21 of 27 02/04/2025, 14:09
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+22 of 27 02/04/2025, 14:09
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+23 of 27 02/04/2025, 14:09
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+24 of 27 02/04/2025, 14:09
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+25 of 27 02/04/2025, 14:09
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+26 of 27 02/04/2025, 14:09
+Aphelios | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Aphelios
+27 of 27 02/04/2025, 14:09
+
+Order of calculations
+Flat armor reduction
+Percentage armor reduction
+Percentage armor penetration
+Percentage bonus armor penetration
+Lethality
+Examples
+Lethality as scaling
+Champion abilities
+Items
+Increasing lethality
+Champion abilities
+Items
+Item passives
+Increasing percent armor
+penetration
+Champion abilities
+Items
+Item passives
+Reducing armor
+Champion abilities
+Items
+Monsters
+Notes
+Trivia
+Highest Lethality
+Armor penetration
+Lethality redirects here. For
+the 2013 Mastery, see
+Lethality.
+Armor penetration is a champion
+statistic that determines the amount
+of a target's armor that will be
+ignored when the user deals physical
+damage. Percentage armor
+penetration and Lethality have no
+effect if the target's armor is less
+than or equal to 0.
+Armor reduction is an effect that
+reduces the target's armor for a
+period of time, by an amount or
+percentage. Flat armor reduction can
+reduce armor values below 0, while
+percentage armor reduction cannot.
+It is important to note that
+penetration treats the target's
+resistances as being multiplied by a
+percentage or reduced by a flat
+amount, in contrast to reduction
+which applies to the target's
+resistances as a whole.
+All champions have 0 base armor
+penetration and lethality, but they can
+be increased by items, runes, and
+with certain champions' passive
+ability effects.
+Starting in V6.22, lethality replaced
+flat armor penetration as a statistic,
+and offered
+ of the value as
+penetration.[1] In V7.14, it was
+changed to scale with the user's level
+instead of the target's level, offering
+ of the
+value as penetration. In V14.1
+lethality was changed back to no
+longer scale by level; it grants the full
+amount of flat armor penetration at
+all levels, but keeps the name to
+differentiate it from percent armor
+penetration and emphasize its relative
+effectiveness against low‐armor
+Contents
+40.33% – 100% (based on
+target's level)
+62.22% – 100% (based on level)
+Armor penetration | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Armor_penetration
+1 of 10 02/04/2025, 14:11
+Highest Armor Penetration (%)
+Media
+See also
+References
+enemies rather than high‐armor
+enemies.[2] In V14.9, lethality was
+updated to be handled as an innate
+statistic rather than a scripted one.
+Armor penetration and armor
+reduction are considered in the
+following order:[3]
+1. Armor reduction, flat
+2. Armor reduction, percentage
+3. Armor penetration, percentage
+4. Armor penetration, flat (Lethality)
+Base armor and bonus armor are calculated separately.
+The target's armor is reduced by an amount. Flat armor reduction
+and is distributed proportionally between base armor and bonus armor.
+Example: 15 armor reduction against a 20 base armor and 40 bonus armor
+target will reduce base armor by 5 and bonus armor by 10, so the target will be
+reduced to 45 armor ((20 − 5) + (40 − 10) = 45).
+Flat armor reduction can reduce a target's armor below zero. For example, if an enemy
+with 10 armor has their armor reduced by 25, the enemy will have −15 armor.
+The target's armor is multiplied by a percentage (100% − the listed reduction). Applies to
+both base and bonus armor. Percentage armor reduction and
+is ignored if the target's armor is 0 or less.
+Example: 30% armor reduction multiplies the target's armor to 70%, so a target
+with 20 base armor and 40 bonus armor will be reduced to 42 armor ((20 × 0.7) +
+(40 × 0.7) = 42).
+Percentage armor reduction reduces more armor on targets with higher armor. For
+instance, with 40% armor reduction, a target with 200 armor will lose 80 while a target
+with only 50 armor will lose 20.
+With 40% armor reduction, the physical damage dealt to a target with 50 armor is only
+increased by around 15%, whereas the physical damage dealt to a target with 200 armor
+is increased by around 36%.
+If one wanted to calculate the total armor reduction after two consecutive percent
+armor reductions, the following formula may be useful:
+������������������������������� = �� + �� − ����
+Order of calculations
+Flat armor reduction
+stacks additively
+Percentage armor reduction
+stacks multiplicatively
+Armor penetration | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Armor_penetration
+2 of 10 02/04/2025, 14:11
+Each r is the individual percent armor reductions. For example, the calculation of two
+armor reductions, 20% and 30%, would yield the following:
+������������������������������� = �� + �� − ���� = ( . 2) + ( . 3) − ( . 2)( . 3) = 44%
+The target's armor is treated as being multiplied by a percentage for purposes of
+damage calculation (100%   −  the listed penetration). Percentage armor penetration
+ and is ignored if the target's armor is 0 or less.
+Example: 30% armor penetration causes the target to take damage as if its
+armor was multiplied by 70%, so a target with 20 base armor and 40 bonus
+armor will be treated as though it had 42 for purposes of damage (the target's
+actual armor value will not change, however) ((20 × 0.7) + (40 × 0.7) = 42).
+Because the target's actual armor value does not change, anything else depending on
+that value also doesn't change.
+Percentage armor penetration reduces more armor on targets with higher armor. For
+instance, with 40% armor penetration, a target with 200 armor will be considered as
+having 80 less while a target with only 50 armor will be considered as having 20 less.
+Gold Value
+Percent armor penetration has a gold value of 41. 41.666667 666667 666667 per point.
+Percentage armor penetration that applies only to bonus armor.
+Example: 30% bonus armor penetration multiplies the target's bonus armor to
+70% without affecting base armor, so a target with 20 base armor and 40
+bonus armor will be treated as though it had 48 for purposes of damage
+calculation (the target's actual armor value will not change, however). (20 +
+(40 × 0.7) = 48).
+If the unit has multiple sources of percentage bonus penetration, they stack
+multiplicatively:
+Example: 10% armor penetration and 30% bonus armor penetration. (20 × 0.9))
++ (40 × 0.7 × 0.9)) = 43.2).
+Because the target's actual armor value does not change, anything else depending on
+that value also doesn't change.
+Percentage bonus armor penetration reduces more armor on targets with higher bonus
+armor, but will not have an effect against base armor. For instance, with 40% bonus
+armor penetration, a target with 200 bonus armor will be considered as having 80 less
+while a target with only 50 bonus armor will be considered as having 20 less. In contrast,
+a target with any amount of base armor and no bonus armor will be considered as
+having the same value.
+Lethality is the statistic that represents and grants flat armor penetration.
+Percentage armor penetration
+stacks multiplicatively
+Percentage bonus armor penetration
+Lethality
+Armor penetration | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Armor_penetration
+3 of 10 02/04/2025, 14:11
+The target's armor is treated as being reduced by an amount for the purposes of
+damage calculation, but cannot be reduced below 0. Flat armor penetration
+.
+Example: 20 lethality on a user will cause a target to take damage as if its
+armor was 20 less, so a target with 30 armor will be treated as though it had 10
+for purposes of damage calculation (the target's actual armor value will not
+change, however).
+Because the target's actual armor value does not change, anything else depending on
+that value also doesn't change.
+Gold Value
+Lethality has a gold value of 3030 per point, for more details see this page.
+Given 10 flat armor penetration and 45% bonus armor penetration, and the target is
+affected by 30 flat armor reduction and 30% armor reduction;
+Target A has 300 armor (100 base and 200 bonus armor).
+The 300 is reduced to 270 (90 base and 180 bonus armor) by the 30 armor
+reduction.
+The 270 is reduced to 189 (63 base and 126 bonus armor) by the 30% armor
+reduction.
+The 189 is considered to be 132.3 (63 base and 69.3 bonus armor) by the 45%
+bonus armor penetration.
+The 132.3 is considered to be 122.3 by the 10 armor penetration.
+Target A takes damage as if it has 122.3 armor.
+Target B has 18 armor.
+The 18 is reduced to −12 by the 30 armor reduction.
+The −12 is not affected by any further calculations because it is less than 0.
+Target B takes damage as if it has −12 armor.
+The following have their stats improved based on the amount of lethality acquired:
+Pyke's Gift of the Drowned Ones, Ghostwater Dive, Phantom
+Undertow, and Death from Below
+Axiom Arc
+stacks additively
+Examples
+Lethality as scaling
+Champion abilities
+Items
+Armor penetration | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Armor_penetration
+4 of 10 02/04/2025, 14:11
+Aphelios' The Hitman and the Seer
+This table is automatically generated based on the data from Module:ItemData/data.
+Increasing lethality
+Champion abilities
+Items
+Armor penetration | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Armor_penetration
+5 of 10 02/04/2025, 14:11
+Item Cost Amount Availability
+Axiom Arc 3000 3000 3000 18
+Nexus Blitz, Arena, Classic
+Summoner's Rift 5v5, All Random All
+Mid
+Duskblade of
+Draktharr
+0000 20 Arena
+Edge of Night 3000 3000 3000 15
+Nexus Blitz, Arena, Classic
+Summoner's Rift 5v5, All Random All
+Mid
+Guardian's Dirk 500 500 500 11 Arena
+Hellfire Hatchet 2500 2500 2500 12 Arena
+Hubris 3000 3000 3000 18
+Nexus Blitz, Arena, Classic
+Summoner's Rift 5v5, All Random All
+Mid
+Opportunity 2700 2700 2700 15
+Nexus Blitz, Arena, Classic
+Summoner's Rift 5v5, All Random All
+Mid
+Profane Hydra 3200 3200 3200 18
+Nexus Blitz, Arena, Classic
+Summoner's Rift 5v5, All Random All
+Mid
+Prowler's Claw 0000 22 Arena
+Regicide 0000 15 Arena
+Serpent's Fang 2500 2500 2500 15
+Nexus Blitz, Arena, Classic
+Summoner's Rift 5v5, All Random All
+Mid
+Serrated Dirk 1000 1000 1000 10 Nexus Blitz, Classic Summoner's Rift
+5v5, All Random All Mid
+Spectral Cutlass 2500 2500 2500 21 Arena
+Talisman of
+Ascension
+0000 0 Arena
+The Brutalizer 1337 1337 1337 5 Nexus Blitz, Classic Summoner's Rift
+5v5, All Random All Mid
+The Collector 3000 3000 3000 10
+Nexus Blitz, Arena, Classic
+Summoner's Rift 5v5, All Random All
+Mid
+Umbral Glaive 2500 2500 2500 15 Nexus Blitz, Classic Summoner's Rift
+5v5, All Random All Mid
+Voltaic
+Cyclosword
+3000 3000 3000 18
+Nexus Blitz, Arena, Classic
+Summoner's Rift 5v5, All Random All
+Mid
+Youmuu's
+Ghostblade
+2800 2800 2800 18
+Nexus Blitz, Arena, Classic
+Summoner's Rift 5v5, All Random All
+Mid
+Opportunity
+Item passives
+Armor penetration | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Armor_penetration
+6 of 10 02/04/2025, 14:11
+Ambessa's Public Execution
+Darius' Apprehend
+K'Sante's All Out
+Nilah's Formless Blade
+Pantheon's Grand Starfall
+This table is automatically generated based on the data from Module:ItemData/data.
+Item Cost Amount Availability
+Last Whisper 1450 1450 1450 18% Nexus Blitz, Classic Summoner's Rift
+5v5, All Random All Mid
+Lord Dominik's
+Regards
+3100 3100 3100 40%
+Nexus Blitz, Arena, Classic
+Summoner's Rift 5v5, All Random All
+Mid
+Mortal
+Reminder
+3300 3300 3300 35%
+Nexus Blitz, Arena, Classic
+Summoner's Rift 5v5, All Random All
+Mid
+Perplexity 2500 2500 2500 22% Arena
+Serylda's
+Grudge
+3000 3000 3000 35%
+Nexus Blitz, Arena, Classic
+Summoner's Rift 5v5, All Random All
+Mid
+Talisman of
+Ascension
+0000 0% Arena
+Terminus
+Percentage Reduction
+Briar's Head Rush
+Garen's Judgment
+Jarvan IV's Dragon Strike
+Jayce's Transform Mercury
+Cannon
+Kayle's Radiant Blast
+Kog'Maw's Caustic Spittle
+Mordekaiser's Realm of Death
+Nasus' Spirit Fire
+Olaf's Undertow
+Rell's Break the Mold
+Renekton's Dice (Empowered)
+Sion's Roar of the Slayer
+Trundle's Subjugate
+Vi's Denting Blows
+Wukong's Crushing Blow
+Increasing percent armor penetration
+Champion abilities
+Items
+Item passives
+Reducing armor
+Champion abilities
+Armor penetration | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Armor_penetration
+7 of 10 02/04/2025, 14:11
+Flat Reduction
+Corki's Gatling Gun
+Rell's Break the Mold
+Rengar's Thrill of the Hunt
+Percentage Reduction
+Black Cleaver
+Flat Reduction
+Atakhan's Frail and Unworthy
+Baron Nashor's
+Armor penetration will apply to any and all sources of .
+It will apply to the damage dealt to almost every type of unit, including
+ but not other structures (Inhibitors are the only building with armor).
+Armor reduction will affect the physical damage from any unit source.
+Percentage penetration is applied before flat penetration.
+ and Dragons have 30% armor penetration.
+Gangplank's Powder Keg is special cased to ignore a percentage of the
+target's armor with its damage.
+Yasuo's Last Breath grants him a buff that causes the damage dealt by his
+critical strikes to ignore a percentage of the target's bonus armor.
+Last updated: January 20, 2024, patch V14.10
+The highest amount of lethality any champion can obtain is 127.
+Items:
+Certainty - 27
+This item grants an additional 10 lethality at the highest level with its
+passive effect, Preparation.
+Youmuu's Ghostblade - 18
+Items
+Monsters
+Void Corruption
+Notes
+physical damage
+turrets
+Turrets
+Trivia
+Highest Lethality
+Armor penetration | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Armor_penetration
+8 of 10 02/04/2025, 14:11
+Voltaic Cyclosword - 18
+Hubris - 18
+Axiom Arc - 18
+Profane Hydra - 18
+Calculation:
+Items = 27 + 10 + 18 + 18 + 18 + 18 + 18 = 127
+lethality
+The highest amount of lethality obtainable in the game is 160 with Aphelios when the
+above items are equipped and The Hitman and the Seer's Lethality is at rank 5.
+127 + 33's = 160
+The highest amount of percentage armor penetration any champion can obtain is 40%
+with Lord Dominik's Regards.
+The highest amount of percentage armor penetration obtainable in the game is 64%
+with Darius when Lord Dominik's Regards is equipped and Apprehend is at
+rank 5.
+Use the formula for armor:
+(1 - 0.4) × (1 - 0.4) = 0.36
+Convert to armor penetration:
+(1 - 0.36) × 100% = 64% armor penetration
+Armor reduced
+indicator
+Armor and magic
+resistance reduced
+indicator
+Armor
+Magic penetration
+Highest Armor Penetration (%)
+Media
+See also
+Armor penetration | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Armor_penetration
+9 of 10 02/04/2025, 14:11
+[show]
+Champion statistic
+1. https://web.archive.org/web/0/http://na.leagueoflegends.com/en/news/gameupdates/patch/patch-72-notes#patch-items
+2. Lethality name (https://youtu.be/PY4boPCTeoo?t=10745)
+3. If I technically had 100% armor reduction on an enemy... (https://web.archive.org/w
+eb/0/http://na.leagueoflegends.com/board/showthread.php?p=32707861#3270786
+1) at LeagueOfLegends.com Boards
+Champion statistics
+Retrieved from "https://wiki.leagueoflegends.com/en-us/Armor_penetration?oldid=3879029"
+This page was last edited on 25 March 2025, at 20:55.
+Content on this site is licensed under CC BY-SA 3.0; additional terms may apply.
+References
+Armor penetration | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Armor_penetration
+10 of 10 02/04/2025, 14:11
+Acquisition
+Auto-attacking
+Attack-move
+Behaviour
+General
+Champion
+Minions
+Monsters
+Turrets
+Structures
+Vision
+Damage
+Attack speed
+Attack timer
+Windup
+Resets
+Special Cases
+Uncancellable Windup
+Untargetability interactions
+Range interactions
+Empowered Basic Attack
+Modified Damage
+Basic attack
+A basic attack (also called a standard, normal, or auto attack) is the
+default means by which a unit deals damage. The player orders their
+champion to perform a basic attack
+when they right‐click on an enemy, or
+when the "attack‐move" command is
+used (default A); idle champions may
+also automatically chase and attack
+targets that venture too close to
+them, if the option to "auto‐attack" is
+enabled.
+Turrets, minions, and most monsters
+perform basic attacks as their only
+method of dealing damage.
+A basic attack under normal
+circumstances deals 100% AD
+physical damage. A unit's attack timer
+determines the time it takes to fire a
+basic attack and wait for a new one to
+be available; it is reduced by attack
+speed and reset by basic attack
+resets.
+In order for an attacker to initiate an
+attack, they must first acquire a
+target. Acquisition occurs when an
+attacker is ordered to attack a valid
+target, as a result of an attack
+command, automatic target
+acquisition, or the forced action
+effects or . The
+attacker will attempt to attack the unit
+if it is within their attack range, or
+attempt to move toward it until their
+attack range meets its
+, and then stop
+moving and attempt to attack the
+target. Acquisition of the target will
+continue until the attacker is given a
+new target, attacking is canceled by
+any means, or the target becomes
+Contents
+Acquisition
+taunt berserk
+gameplay radius
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+1 of 16 02/04/2025, 14:10
+Bonus Damage
+Damage over Time
+Others
+Trivia
+References
+invalid.
+By default, when champions are idle
+they automatically acquire the nearest
+enemy unit within their
+ as their target.
+This feature is called automatic target
+acquisition or simply auto‐attacking
+and can be toggled from the Settings > 'Game' tab.
+Auto‐attacking can be temporarily disabled by holding down the "hold
+position" key (default J), or by issuing a stop command (default S), which stops
+all orders including auto‐attacking until a new order is manually provided by the
+player.
+Attack‐move commands allow a champion to move toward a given destination
+location while scanning for a valid hostile within . Attack‐
+move has two modes:
+When using regular attack-move (default A), the player's attack range
+indicator becomes visible and they may select either a location or a
+target by left-clicking. Selecting a location scans to acquire the nearest
+target to the champion's position. Selecting a target directly acquires it
+without scanning, like a normal attack order.
+When using attack-move click (default SHIFT + RIGHT CLICK), the
+champion performs the above, but without the player having to select
+separately. The position of the player's cursor when issuing the
+command is assumed to be the selection position. The range indicator is
+not visible when using attack-move click.
+The "Attack move on cursor" option changes the targeting behavior of attack‐
+move commands. It can be toggled from the Settings > 'Game' tab.
+If this option is enabled: the champion may also scan to acquire the
+nearest target in a circle around the cursor's position within or near
+attack range.
+If this option is disabled, or a target cannot be found using the cursor's
+position within or near attack range: attack-move commands use the
+default behavior of the champion's position.
+Auto-attacking
+acquisition range
+Attack-move
+acquisition range
+Behaviour
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+2 of 16 02/04/2025, 14:10
+A basic attack cannot be avoided under normal circumstances once the
+attacker has begun their attack; it also cannot lose its target and it may hit
+them despite any subsequent changes in position. The following are
+exceptions to this rule and will cause basic attacks to fail:
+Parrying effects, which negate the attack's effects entirely:
+Attacking becomes disabled, rendering basic attacks unable to be
+declared. This includes (this lists those that have the capability to do so):
+ (e.g. , , )
+Cast time
+The attack's windup is interrupted, if the:
+Attacker is issued a different command
+Attacker or the target
+Target becomes
+Target is too far away
+Target is no longer in
+Certain basic attacks can be physically dodged (by using mobility spells or
+quickly moving out of the way) as they do not follow their target after being
+fired, though they travel fast enough that they are unlikely to be dodged. These
+are: Graves' New Destiny and Twitch's Spray and Pray.
+When a champion is ordered to attack a valid target and acquisition of them
+continues without interruption (meaning the champion is left to continue
+attacking the same, valid target on their own), delays may emerge. These
+delays are caused by potential target checks. The champion may also not
+perfectly stop to attack the target at attack range, but may finish their
+movement at a slightly closer distance before attacking.
+Due to this behavior, manual cycling of issued movement and attack
+commands is faster and more precise than automatic orders.
+Many champions have abilities that will affect their basic attacks in some way
+or form. Such abilities are treated like basic attacks, which means they may
+General
+Dodge
+Block
+Blind
+Crowd control disarm stun suppression
+Channeling
+Lockout
+dies
+untargetable
+sight
+Champion
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+3 of 16 02/04/2025, 14:10
+trigger on‐hit effects and/or ability effects.
+There exists a two‐game‐tick (0.066 second) grace period where a champion's
+attack windup becomes inherently uncancellable by the player through
+movement commands and/or the hold or stop commands. This is a strictly
+unchanging implementation: at incredibly high attack speeds, it may cause any
+given attack windup to be uncancellable for its entirety, since it would last less
+than or equal to this grace period of 2 game‐ticks.
+Main article: Minion
+Minions will automatically attack their closest target by default, but
+may change targets in a similar manner to turrets.
+The majority of monsters only use basic attacks that deal physical damage,
+the exceptions are:
+Baron Nashor who also casts abilities.
+Rift Herald who also casts abilities.
+Gromp whose basic attacks deal magic damage.
+Rift Scuttler which does not attack at all.
+Main article: Turret
+Turrets have armor penetration, and when hitting a , they
+additionally deal more damage to any champion for each consecutive
+attack, up to a cap.
+The behavior of turrets as well as their basic attacks' damage are described
+on the corresponding page.
+The only exception to the above is the Nexus Obelisk (also called the Fountain
+Laser) that deals which ignores all kinds of
+damage reduction, untargetability and damage immunity effects and its attack
+does not have a missile travel speed.
+Structures can normally only be damaged by basic attacks. However, some
+abilities that function like basic attacks (e.g. Fiora's Lunge,
+Trundle's Chomp, Senna's Piercing Darkness, etc.) and certain
+effects such as Tristana's Explosive Charge and Ziggs' Satchel
+Minions
+Monsters
+Turrets
+champion
+a special type of true damage
+Structures
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+4 of 16 02/04/2025, 14:10
+Charge are special‐cased to be able to target and deal damage to turrets.
+Basic attacking while hiding in brush or in Fog of War will reveal a 300‐unit
+radius centered at them for 2 seconds after the attack completes.
+Basic attacks always deal physical damage, with some exceptions.
+The following will modify the attack's total damage to magic damage:
+Galio's Colossal Smash
+Nidalee's Takedown
+Sylas' Petricite Burst
+Twisted Fate's Pick a
+Card
+Viktor's Discharge
+Zac's Stretching Strikes
+Zeri's Living Battery
+Finally, Yone's Way of the Hunter can modify the attack's total damage
+to part physical and part magic damage, and Camille's Empowered
+Precision Protocol will modify the attack's total damage to part physical and
+part true damage.
+Barring the exceptions above, certain items, buffs, and abilities may cause the
+attacker to deal additional damage of any subtype on top of their base
+physical damage. The physical damage dealt by basic attacks benefits from
+the attacker's attack damage stat and is reduced by the target's armor.
+When basic attacking a turret, attacks deal 100% base AD (+
+100% bonus AD) (+ 60% AP):
+Physical damage, if 100% bonus AD > 60% AP
+Magic damage, if 100% bonus AD < 60% AP
+Main article: Attack speed
+See also: List of champions/Basic attacks
+The rate at which a champion attacks is called attack speed and is by
+default capped at 2.5 attacks per second, though certain abilities and runes
+can modify this value.
+Attack timer = 1 ÷ total attack speed
+Vision
+Damage
+champion
+Attack speed
+Attack timer
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+5 of 16 02/04/2025, 14:10
+Like abilities, basic attacks have an uptime when a basic attack is available,
+and a downtime when the basic attack is on‐cooldown.
+Attacks follow a two‐phase period called the attack timer, which consists of:
+1. The windup, during which an attacker executes a basic attack.
+2. The cooldown, during which an attacker cannot execute a basic attack.
+Starting a windup also starts counting the attack timer.
+When the windup is interrupted by any means, the attack timer stops
+counting and resets to zero. A basic attack has not been launched and
+a new windup may begin whenever allowed/possible.
+When the windup completes and a basic attack has been launched, the
+attack timer continues on to incur its cooldown phase. All issued attack
+commands will be invalidated during this time.
+When the cooldown completes, the attack timer also ends, allowing a
+new windup to begin.
+Optimizing movement commands after launching an attack is known as
+stutter‐stepping.
+A unit's attack windup is the portion of their attack which must be completed
+in order to launch it, different for each unit. The attacker must be standing in
+place in order to complete the windup.
+Upon the windup completing for non-projectile attacks, the attack
+simultaneously launches and hits the target.
+Upon the windup completing for projectile attacks, launching the attack
+creates a projectile, which follows and hits the target shortly after.
+The windup and therefore the attack is canceled by issuing a different
+command at any point before the moment of launching. After launching the
+attack, commands may be freely input without penalty.
+Normally, a champion's windup time scales the same as their attack's total
+time, proportionally to their attack speed given both bonuses and .
+For champions that are given a windup modifier (a value different from the
+default 1) by the game rules, the actual duration of their windup is scaled
+against the expected value by that amount. Base windup time refers to the
+champion's windup time at level 1 and with no attack speed bonuses.
+All champions are implicitly given a windup percent by the game rules, the
+percentage of the attack's total time that the windup takes up. There are
+currently two different ways of determining the windup percent — most newer
+champions use an independent formula while all others utilize a constant. This
+difference does not affect gameplay.
+Windup
+cripples
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+6 of 16 02/04/2025, 14:10
+The original way of calculating the windup percent is 0 . 3 + attackOffset
+where:
+attackOffset is a given positive or negative decimal value.
+The updated way of calculating the windup percent is
+attackCastTime ÷ attackTotalTime where:
+attackCastTime is a given positive decimal value in seconds
+attackTotalTime is a given positive decimal value in seconds, larger
+than attackCastTime
+Assuming:
+All attack speed values are in decimal form.
+WindupPercent = the statistic as a decimal
+WindupModifier = the statistic as a decimal, defaults to 1
+currentAttackTotalTime = 1 ÷ total attack speed
+baseWindupTime = WindupPercent ÷ base attack speed
+Then to calculate a champion's current windup time, use the following
+formulas:
+1. General form:
+baseWindupTime + WindupModifier × {
+currentAttackTotalTime × WindupPercent –
+baseWindupTime }
+2. If the champion's base attack speed and attack speed ratio are equal,
+the formula can be adjusted to:
+currentAttackTotalTime × WindupPercent × { 1 +
+bonus attack speed × (1 - WindupModifier) }
+3. If the champion has no windup modifier and their base attack speed
+and attack speed ratio are equal, the formula can be simplified to:
+currentAttackTotalTime × WindupPercent
+or
+baseWindupTime ÷ {bonus attack speed + 1}
+The cast of certain abilities and item actives will (forcibly) reset the attack
+timer to zero. Depending on which phase of the attack the player casts them
+in, this effect may be detrimental or beneficial to the player:
+Resetting during the windup means that the current attack is canceled,
+thus delaying the windup and launch of the next attack.
+Resets
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+7 of 16 02/04/2025, 14:10
+Resetting during the cooldown means that the remaining cooldown is
+negated, thus allowing a new windup to begin faster than normal.
+Hail of Blades does not consume a stack from launched attacks that have
+been reset.
+The following abilities will reset the basic attack timer after use:
+Aatrox's
+Umbral Dash
+Ashe's
+Ranger's Focus
+Blitzcrank's
+Power Fist
+Briar's Head
+Rush, Blood
+Frenzy, and
+Snack Attack
+Camille's
+Precision
+Protocol
+Cho'Gath's
+Vorpal Spikes
+Darius'
+Crippling Strike
+Dr. Mundo's
+Blunt Force
+Trauma
+Ekko's
+Phase Dive *
+Elise's
+Skittering
+Frenzy
+Fiora's
+Bladework
+Fizz's
+Seastone
+Trident
+Garen's
+Decisive Strike
+Graves'
+Quickdraw
+Hecarim's
+Devastating
+Charge
+Illaoi's Harsh
+Lesson
+Jax's
+Empower
+Jayce's
+Hyper Charge
+Kassadin's
+Nether Blade
+Katarina's
+Shunpo
+Kayle's
+Starfire
+Spellblade
+Kindred's
+Dance of
+Arrows *
+Leona's
+Shield of
+Daybreak
+Lucian's
+Relentless
+Pursuit *
+Malphite's
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+8 of 16 02/04/2025, 14:10
+Thunderclap
+Maokai's
+Sap Magic
+Master Yi's
+Meditate
+Nasus'
+Siphoning Strike
+Nautilus'
+Titan's Wrath
+Nidalee's
+Takedown
+Nilah's
+Slipstream
+Olaf's Tough
+It Out
+Pantheon's
+Empowered
+Shield Vault *
+Quinn's
+Vault *
+Rek'Sai's
+Queen's Wrath
+Renekton's
+Ruthless
+Predator
+Rengar's
+Savagery
+Samira's
+Daredevil
+Impulse
+Sejuani's
+Permafrost *
+Sett's
+Knuckle Down
+Shyvana's
+Twin Bite
+Sivir's
+Ricochet
+Sona's
+Power Chord
+Talon's
+Noxian
+Diplomacy
+Trundle's
+Chomp
+Twisted Fate's
+Pick a Card's
+recast
+Vayne's
+Tumble *
+Vi's
+Relentless
+Force
+Viego's
+Spectral Maw*
+Volibear's
+Thundering
+Smash
+Wukong's
+Crushing Blow
+Xin Zhao's
+Three Talon
+Strike
+Yorick's Last
+Rites
+Zac's
+Stretching
+Strikes
+Zeri's Spark
+Surge *
+Zoe's Portal
+Jump
+The following item actives will reset the basic attack timer after use:
+Titanic Hydra's Titanic Crescent
+Bel'Veth's Void Surge, Kai'Sa's Killer Instinct, K'Sante's
+Ntofo Strikes, Gwen's Skip 'n Slash, Rell's Ferromancy:
+Mount Up, Riven's Broken Wings, Skarner's Shattered Earth,
+and Hextech Rocketbelt * are attack resets that aren't considered one for
+Hail of Blades.
+Leona's Shield of Daybreak and Volibear's Thundering Smash
+are attack resets that don't put the user's basic attack timer on cooldown
+when using their spell's attacks, resulting in a double attack reset.
+Certain abilities that reset the attack timer will cause the caster to dash
+before they are able to declare a basic attack again, meaning they will not be
+Special Cases
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+9 of 16 02/04/2025, 14:10
+able to follow up with their next basic attack as quickly due to the time spent
+performing the dash. In order to bypass this lockout time, the caster can try to
+end the dash prematurely, such as dashing into a wall or dashing in place (if
+applicable). This is the case as the caster spends less time dashing and
+decreases the amount of time it takes to execute their next attack.
+A basic attack that is not is classified as having an
+. Basic attacks with uncancellable windups are only
+stopped by , , Quinn's Vault, and in some
+cases, and range. These include:
+Ambessa's Drakehound's
+Step
+Aphelios' Severum
+Blitzcrank's Power Fist
+Briar's Snack Attack
+Caitlyn's Headshot
+Camille's Precision
+Protocol
+Darius' Crippling Strike
+Dr. Mundo's Blunt Force
+Trauma
+Fizz's Seastone Trident
+Galio's Colossal Smash
+Garen's Decisive Strike
+Gragas' Drunken Rage
+Illaoi's Harsh Lesson
+(only within her base
+ attack range)
+Jax's Empower
+Jhin's Whisper (fourth
+shot)
+Kassadin's Nether Blade
+Kayle's Starfire
+Spellblade
+Maokai's Sap Magic
+Malphite's Thunderclap
+Nasus' Siphoning Strike
+Nidalee's Takedown
+Rengar's Savagery
+Samira's Daredevil
+Impulse
+Seraphine's Stage
+Presence
+Skarner's Shattered Earth
+Sona's Power Chord
+Shyvana's Twin Bite in
+Dragon Form
+Sylas' Petricite Burst
+Trundle's Chomp
+Udyr's Blazing Stampede
+Vayne's Tumble
+Vi's Relentless Force
+Volibear's Thundering
+Smash
+Wukong's Crushing Blow
+Xin Zhao's Three Talon
+Strike
+Yorick's Last Rites
+Yuumi's Feline Friendship
+Uncancellable Windup
+interruptible
+uncancellable windup
+death polymorph
+untargetability
+Untargetability interactions
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+10 of 16 02/04/2025, 14:10
+The following table features uncancellable windups that will be cancelled by
+the target becoming during the windup and those that will
+complete the windup regardless of the target being targetable or not.
+Show
+The following table features uncancellable windups that will cancel from the
+target moving too far away during the windup and those that will complete
+regardless of the target's location.
+Show
+To see the items and runes that deal bonus damage with basic attacks, see
+attack effects.
+The following champion abilities have their basic attack dealing modified
+damage:
+Akshan's Dirty Fighting
+Aphelios' Infernum
+Ashe's Frost Shot and
+Ranger's Focus
+Bel'Veth's Death in
+Lavender
+Galio's Colossal Smash
+Graves' New Destiny
+Hecarim's Devastating
+Charge
+Jayce's Hyper Charge
+Jinx's Fishbones
+K'Sante's Dauntless
+Instinct
+Lucian's Lightslinger
+Master Yi's Double Strike
+Nidalee's Takedown
+Pantheon's Shield Vault
+Renekton's Ruthless
+Predator
+Samira's Daredevil
+Impulse
+Shyvana's Twin Bite
+Sona's Power Chord
+Sylas' Petricite Burst
+Twisted Fate's Pick a
+Card
+Vi's Relentless Force
+Viego's Blade of the
+Ruined King
+Viktor's Discharge
+Yone's Way of the Hunter
+untargetable
+Hide
+Range interactions
+Hide
+Empowered Basic Attack
+Modified Damage
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+11 of 16 02/04/2025, 14:10
+Zac's Stretching Strikes Zeri's Living Battery
+The following champion abilities will empower their basic attack to deal bonus
+damage:
+Aatrox's
+Deathbringer
+Stance
+Akali's
+Assassin's Mark
+Akshan's
+Dirty Fighting
+Alistar's
+Trample
+Ambessa's
+Drakehound's
+Step
+Aphelios'
+Calibrum and
+Crescendum
+Bard's
+Traveler's Call
+Bel'Veth's
+Endless
+Banquet
+Blitzcrank's
+Power Fist and
+Static Field
+Braum's
+Concussive
+Blows
+Briar's
+Snack Attack
+Caitlyn's
+Headshot
+Camille's
+Precision
+Protocol and
+The Hextech
+Ultimatum
+Cho'Gath's
+Vorpal Spikes
+Corki's
+Hextech
+Munitions
+Darius'
+Crippling Strike
+Dr. Mundo's
+Blunt Force
+Trauma
+Diana's
+Moonsilver
+Blade
+Draven's
+Spinning Axe
+Ekko's ZDrive Resonance,
+Parallel
+Convergence, and
+Phase Dive
+Elise's
+Spider Queen
+Evelynn's
+Hate Spike
+Ezreal's
+Essence Flux
+Fiora's
+Bladework
+Fizz's
+Seastone
+Trident
+Garen's
+Decisive Strike
+Gnar's
+Hyper
+Gragas'
+Drunken Rage
+Gwen's
+Thousand Cuts
+and Skip 'n
+Slash
+Hwei's
+Stirring Lights
+Illaoi's Harsh
+Lesson
+Irelia's
+Ionian Fervor
+Ivern's
+Brushmaker
+Janna's
+Tailwind
+Jarvan IV's
+Martial Cadence
+Jax's
+Empower and
+GrandmasterAt-Arms
+Jayce's
+Transform
+Mercury Hammer
+Jhin's
+Whisper
+Kai'Sa's
+Second Skin
+Bonus Damage
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+12 of 16 02/04/2025, 14:10
+Kalista's
+Sentinel
+Kassadin's
+Nether Blade
+Kayle's
+Divine Ascent
+and Starfire
+Spellblade
+Kennen's
+Electrical Surge
+Kha'Zix's
+Unseen Threat
+Kindred's
+Mounting Dread
+Kled's
+Violent
+Tendencies
+Kog'Maw's
+Bio-Arcane
+Barrage
+K'Sante's
+Dauntless
+Instinct
+Leona's
+Sunlight (allies
+only) and Shield
+of Daybreak
+Lucian's
+Lightslinger
+Lulu's Pix,
+Faerie Companion
+Lux's
+Illumination
+Malphite's
+Thunderclap
+Master Yi's
+Wuju Style
+Milio's Fired
+Up!
+Miss Fortune's
+Love Tap
+Mordekaiser's
+Darkness Rise
+Nami's
+Tidecaller's
+Blessing
+Nasus'
+Siphoning Strike
+Nautilus'
+Staggering Blow
+and Titan's
+Wrath
+Neeko's
+Shapesplitter
+Nocturne's
+Umbra Blades
+Orianna's
+Clockwork
+Winding
+Ornn's
+Living Forge
+Poppy's Iron
+Ambassador
+Qiyana's
+Royal Privilege
+and Terrashape
+Quinn's
+Harrier
+Rammus'
+Spiked Shell
+Rek'Sai's
+Queen's Wrath
+Rell's Break
+the Mold,
+Ferromancy:
+Mount Up and
+Full Tilt
+Renata Glasc's
+Leverage
+Rengar's
+Savagery
+Riven's
+Runic Blade
+Rumble's
+Junkyard Titan
+Samira's
+Daredevil
+Impulse
+Sejuani's
+Fury of the
+North
+Senna's
+Absolution
+Sett's Pit
+Grit's and
+Knuckle Down
+Seraphine's
+Stage Presence
+Shaco's
+Backstab and
+Deceive
+Shen's
+Twilight Assault
+Shyvana's
+Flame Breath
+Sion's Glory
+in Death
+Skarner's
+Shattered Earth
+Sona's
+Power Chord
+Tahm Kench's
+An Acquired
+Taste
+Taric's
+Bravado
+Teemo's
+Toxic Shot
+Thresh's
+Flay
+Trundle's
+Chomp
+Twisted Fate's
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+13 of 16 02/04/2025, 14:10
+Stacked Deck
+Udyr's
+Wilding Claw
+and Wingborne
+Storm
+Urgot's
+Echoing Flames
+Varus'
+Blighted Quiver
+Vayne's
+Tumble and
+Silver Bolts
+Vex's Doom
+'n Gloom
+Vi's Denting
+Blows
+Viego's
+Blade of the
+Ruined King
+Volibear's
+The Relentless
+Storm and
+Thundering
+Smash
+Warwick's
+Eternal Hunger
+Wukong's
+Crushing Blow
+Xayah's
+Deadly Plumage
+Xin Zhao's
+Determination
+and Three Talon
+Strike
+Yorick's Last
+Rites and
+Eulogy of the
+Isles
+Yuumi's
+Prowling
+Projectile ( Best
+Friend only)
+Zed's
+Contempt for
+the Weak
+Ziggs' Short
+Fuse
+Zoe's More
+Sparkles!
+The following champion abilities will empower their basic attack to deal
+additional damage over time:
+Briar's Crimson Curse
+Darius' Hemorrhage
+Fizz's Seastone Trident
+Gangplank's Trial by Fire
+Milio's Fired Up!
+Nautilus' Titan's Wrath
+Sivir's Ricochet
+Skarner's Threads of Vibration
+Talon's Blade's End
+Teemo's Toxic Shot
+Twitch's Deadly Venom
+Udyr's Wilding Claw
+The following champion abilities do not do additional/modified damage to
+their target but will empower their basic attacks to give another bonus:
+Damage over Time
+Others
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+14 of 16 02/04/2025, 14:10
+Amumu's Cursed Touch
+Aphelios' Severum and
+Gravitum
+Briar's Blood Frenzy
+Camille's Adaptive
+Defenses
+Gnar's Rage Gene
+Jax's Relentless Assault
+Jayce's Lightning Field
+and Transform Mercury
+Cannon
+Jinx's Pow-Pow
+Kalista's Martial Poise
+and Rend
+Kindred's Wolf's Frenzy
+Kled's Skaarl the
+Cowardly Lizard
+Lee Sin's Flurry
+Maokai's Sap Magic
+Master Yi's Alpha Strike
+Nilah's Formless Blade
+Nunu & Willump's Call of
+the Freljord
+Olaf's Reckless Swing
+and Ragnarok
+Pantheon's Mortal Will
+Rakan's Fey Feathers
+Rammus' Defensive Ball
+Curl
+Rek'Sai's Fury of the
+Xer'Sai
+Rell's Break the Mold
+Renekton's Reign of
+Anger
+Rengar's Unseen
+Predator
+Sejuani's Permafrost
+Shaco's Two-Shiv Poison
+Shyvana's Dragon's
+Descent
+Sivir's Fleet of Foot and
+On the Hunt
+Tristana's Explosive
+Charge
+Tryndamere's Battle Fury
+and Spinning Slash
+Twitch's Spray and Pray
+Udyr's Bridge Between,
+Iron Mantle and Blazing
+Stampede
+Vel'Koz's Organic
+Deconstruction
+Xayah's Clean Cuts
+Xerath's Mana Surge
+Xin Zhao's Crescent
+Guard
+Yasuo's Last Breath
+Yuumi's Feline Friendship
+and You and Me! ( Best
+Friend) only)
+Each unit that can perform basic attacks has a unique firing and
+recovery animation for their attack's windup and winddown which
+represents the physical action of drawing into and away from an attack.
+A champion's basic attack animation may be modified by skins.
+Turrets only display their acquired target and the fired attack, for
+game clarity purposes (also, turrets are thematically stationary).
+Hostile turrets are the only units in the game that visually and
+Trivia
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+15 of 16 02/04/2025, 14:10
+[show]
+unambiguously mark an acquired target, specifically with a line from
+their apex to their target.
+In the initial iteration, the icon used to denote basic attacks is reused
+from an alpha item with unknown effects called Long Staff.
+"Basic" comes from the fact that "attack" used to refer to any hostile
+action a champion could perform, with "special attacks" referring to
+ability-based actions. Effects such as Unbreakable used to refer to
+"attacks" in their in-game tooltips, referring to what we would now
+distinguish as basic attacks and abilities. The use of "attack" to refer to
+anything other than "basic attacks" has generally been discontinued, but
+affixing the term with 'basic' remains.
+The majority of champions' windup time makes up around 15–30% of
+their attack's total time.
+Gameplay Elements
+Retrieved from "https://wiki.leagueoflegends.com/en-us/Basic_attack?oldid=3879466"
+This page was last edited on 27 March 2025, at 17:17.
+Content on this site is licensed under CC BY-SA 3.0; additional terms may apply.
+References
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+16 of 16 02/04/2025, 14:10
+
+Acquisition
+Auto-attacking
+Attack-move
+Behaviour
+General
+Champion
+Minions
+Monsters
+Turrets
+Structures
+Vision
+Damage
+Attack speed
+Attack timer
+Windup
+Resets
+Special Cases
+Uncancellable Windup
+Untargetability interactions
+Range interactions
+Empowered Basic Attack
+Modified Damage
+Basic attack
+A basic attack (also called a standard, normal, or auto attack) is the
+default means by which a unit deals damage. The player orders their
+champion to perform a basic attack
+when they right‐click on an enemy, or
+when the "attack‐move" command is
+used (default A); idle champions may
+also automatically chase and attack
+targets that venture too close to
+them, if the option to "auto‐attack" is
+enabled.
+Turrets, minions, and most monsters
+perform basic attacks as their only
+method of dealing damage.
+A basic attack under normal
+circumstances deals 100% AD
+physical damage. A unit's attack timer
+determines the time it takes to fire a
+basic attack and wait for a new one to
+be available; it is reduced by attack
+speed and reset by basic attack
+resets.
+In order for an attacker to initiate an
+attack, they must first acquire a
+target. Acquisition occurs when an
+attacker is ordered to attack a valid
+target, as a result of an attack
+command, automatic target
+acquisition, or the forced action
+effects or . The
+attacker will attempt to attack the unit
+if it is within their attack range, or
+attempt to move toward it until their
+attack range meets its
+, and then stop
+moving and attempt to attack the
+target. Acquisition of the target will
+continue until the attacker is given a
+new target, attacking is canceled by
+any means, or the target becomes
+Contents
+Acquisition
+taunt berserk
+gameplay radius
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+1 of 16 02/04/2025, 14:10
+Bonus Damage
+Damage over Time
+Others
+Trivia
+References
+invalid.
+By default, when champions are idle
+they automatically acquire the nearest
+enemy unit within their
+ as their target.
+This feature is called automatic target
+acquisition or simply auto‐attacking
+and can be toggled from the Settings > 'Game' tab.
+Auto‐attacking can be temporarily disabled by holding down the "hold
+position" key (default J), or by issuing a stop command (default S), which stops
+all orders including auto‐attacking until a new order is manually provided by the
+player.
+Attack‐move commands allow a champion to move toward a given destination
+location while scanning for a valid hostile within . Attack‐
+move has two modes:
+When using regular attack-move (default A), the player's attack range
+indicator becomes visible and they may select either a location or a
+target by left-clicking. Selecting a location scans to acquire the nearest
+target to the champion's position. Selecting a target directly acquires it
+without scanning, like a normal attack order.
+When using attack-move click (default SHIFT + RIGHT CLICK), the
+champion performs the above, but without the player having to select
+separately. The position of the player's cursor when issuing the
+command is assumed to be the selection position. The range indicator is
+not visible when using attack-move click.
+The "Attack move on cursor" option changes the targeting behavior of attack‐
+move commands. It can be toggled from the Settings > 'Game' tab.
+If this option is enabled: the champion may also scan to acquire the
+nearest target in a circle around the cursor's position within or near
+attack range.
+If this option is disabled, or a target cannot be found using the cursor's
+position within or near attack range: attack-move commands use the
+default behavior of the champion's position.
+Auto-attacking
+acquisition range
+Attack-move
+acquisition range
+Behaviour
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+2 of 16 02/04/2025, 14:10
+A basic attack cannot be avoided under normal circumstances once the
+attacker has begun their attack; it also cannot lose its target and it may hit
+them despite any subsequent changes in position. The following are
+exceptions to this rule and will cause basic attacks to fail:
+Parrying effects, which negate the attack's effects entirely:
+Attacking becomes disabled, rendering basic attacks unable to be
+declared. This includes (this lists those that have the capability to do so):
+ (e.g. , , )
+Cast time
+The attack's windup is interrupted, if the:
+Attacker is issued a different command
+Attacker or the target
+Target becomes
+Target is too far away
+Target is no longer in
+Certain basic attacks can be physically dodged (by using mobility spells or
+quickly moving out of the way) as they do not follow their target after being
+fired, though they travel fast enough that they are unlikely to be dodged. These
+are: Graves' New Destiny and Twitch's Spray and Pray.
+When a champion is ordered to attack a valid target and acquisition of them
+continues without interruption (meaning the champion is left to continue
+attacking the same, valid target on their own), delays may emerge. These
+delays are caused by potential target checks. The champion may also not
+perfectly stop to attack the target at attack range, but may finish their
+movement at a slightly closer distance before attacking.
+Due to this behavior, manual cycling of issued movement and attack
+commands is faster and more precise than automatic orders.
+Many champions have abilities that will affect their basic attacks in some way
+or form. Such abilities are treated like basic attacks, which means they may
+General
+Dodge
+Block
+Blind
+Crowd control disarm stun suppression
+Channeling
+Lockout
+dies
+untargetable
+sight
+Champion
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+3 of 16 02/04/2025, 14:10
+trigger on‐hit effects and/or ability effects.
+There exists a two‐game‐tick (0.066 second) grace period where a champion's
+attack windup becomes inherently uncancellable by the player through
+movement commands and/or the hold or stop commands. This is a strictly
+unchanging implementation: at incredibly high attack speeds, it may cause any
+given attack windup to be uncancellable for its entirety, since it would last less
+than or equal to this grace period of 2 game‐ticks.
+Main article: Minion
+Minions will automatically attack their closest target by default, but
+may change targets in a similar manner to turrets.
+The majority of monsters only use basic attacks that deal physical damage,
+the exceptions are:
+Baron Nashor who also casts abilities.
+Rift Herald who also casts abilities.
+Gromp whose basic attacks deal magic damage.
+Rift Scuttler which does not attack at all.
+Main article: Turret
+Turrets have armor penetration, and when hitting a , they
+additionally deal more damage to any champion for each consecutive
+attack, up to a cap.
+The behavior of turrets as well as their basic attacks' damage are described
+on the corresponding page.
+The only exception to the above is the Nexus Obelisk (also called the Fountain
+Laser) that deals which ignores all kinds of
+damage reduction, untargetability and damage immunity effects and its attack
+does not have a missile travel speed.
+Structures can normally only be damaged by basic attacks. However, some
+abilities that function like basic attacks (e.g. Fiora's Lunge,
+Trundle's Chomp, Senna's Piercing Darkness, etc.) and certain
+effects such as Tristana's Explosive Charge and Ziggs' Satchel
+Minions
+Monsters
+Turrets
+champion
+a special type of true damage
+Structures
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+4 of 16 02/04/2025, 14:10
+Charge are special‐cased to be able to target and deal damage to turrets.
+Basic attacking while hiding in brush or in Fog of War will reveal a 300‐unit
+radius centered at them for 2 seconds after the attack completes.
+Basic attacks always deal physical damage, with some exceptions.
+The following will modify the attack's total damage to magic damage:
+Galio's Colossal Smash
+Nidalee's Takedown
+Sylas' Petricite Burst
+Twisted Fate's Pick a
+Card
+Viktor's Discharge
+Zac's Stretching Strikes
+Zeri's Living Battery
+Finally, Yone's Way of the Hunter can modify the attack's total damage
+to part physical and part magic damage, and Camille's Empowered
+Precision Protocol will modify the attack's total damage to part physical and
+part true damage.
+Barring the exceptions above, certain items, buffs, and abilities may cause the
+attacker to deal additional damage of any subtype on top of their base
+physical damage. The physical damage dealt by basic attacks benefits from
+the attacker's attack damage stat and is reduced by the target's armor.
+When basic attacking a turret, attacks deal 100% base AD (+
+100% bonus AD) (+ 60% AP):
+Physical damage, if 100% bonus AD > 60% AP
+Magic damage, if 100% bonus AD < 60% AP
+Main article: Attack speed
+See also: List of champions/Basic attacks
+The rate at which a champion attacks is called attack speed and is by
+default capped at 2.5 attacks per second, though certain abilities and runes
+can modify this value.
+Attack timer = 1 ÷ total attack speed
+Vision
+Damage
+champion
+Attack speed
+Attack timer
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+5 of 16 02/04/2025, 14:10
+Like abilities, basic attacks have an uptime when a basic attack is available,
+and a downtime when the basic attack is on‐cooldown.
+Attacks follow a two‐phase period called the attack timer, which consists of:
+1. The windup, during which an attacker executes a basic attack.
+2. The cooldown, during which an attacker cannot execute a basic attack.
+Starting a windup also starts counting the attack timer.
+When the windup is interrupted by any means, the attack timer stops
+counting and resets to zero. A basic attack has not been launched and
+a new windup may begin whenever allowed/possible.
+When the windup completes and a basic attack has been launched, the
+attack timer continues on to incur its cooldown phase. All issued attack
+commands will be invalidated during this time.
+When the cooldown completes, the attack timer also ends, allowing a
+new windup to begin.
+Optimizing movement commands after launching an attack is known as
+stutter‐stepping.
+A unit's attack windup is the portion of their attack which must be completed
+in order to launch it, different for each unit. The attacker must be standing in
+place in order to complete the windup.
+Upon the windup completing for non-projectile attacks, the attack
+simultaneously launches and hits the target.
+Upon the windup completing for projectile attacks, launching the attack
+creates a projectile, which follows and hits the target shortly after.
+The windup and therefore the attack is canceled by issuing a different
+command at any point before the moment of launching. After launching the
+attack, commands may be freely input without penalty.
+Normally, a champion's windup time scales the same as their attack's total
+time, proportionally to their attack speed given both bonuses and .
+For champions that are given a windup modifier (a value different from the
+default 1) by the game rules, the actual duration of their windup is scaled
+against the expected value by that amount. Base windup time refers to the
+champion's windup time at level 1 and with no attack speed bonuses.
+All champions are implicitly given a windup percent by the game rules, the
+percentage of the attack's total time that the windup takes up. There are
+currently two different ways of determining the windup percent — most newer
+champions use an independent formula while all others utilize a constant. This
+difference does not affect gameplay.
+Windup
+cripples
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+6 of 16 02/04/2025, 14:10
+The original way of calculating the windup percent is 0 . 3 + attackOffset
+where:
+attackOffset is a given positive or negative decimal value.
+The updated way of calculating the windup percent is
+attackCastTime ÷ attackTotalTime where:
+attackCastTime is a given positive decimal value in seconds
+attackTotalTime is a given positive decimal value in seconds, larger
+than attackCastTime
+Assuming:
+All attack speed values are in decimal form.
+WindupPercent = the statistic as a decimal
+WindupModifier = the statistic as a decimal, defaults to 1
+currentAttackTotalTime = 1 ÷ total attack speed
+baseWindupTime = WindupPercent ÷ base attack speed
+Then to calculate a champion's current windup time, use the following
+formulas:
+1. General form:
+baseWindupTime + WindupModifier × {
+currentAttackTotalTime × WindupPercent –
+baseWindupTime }
+2. If the champion's base attack speed and attack speed ratio are equal,
+the formula can be adjusted to:
+currentAttackTotalTime × WindupPercent × { 1 +
+bonus attack speed × (1 - WindupModifier) }
+3. If the champion has no windup modifier and their base attack speed
+and attack speed ratio are equal, the formula can be simplified to:
+currentAttackTotalTime × WindupPercent
+or
+baseWindupTime ÷ {bonus attack speed + 1}
+The cast of certain abilities and item actives will (forcibly) reset the attack
+timer to zero. Depending on which phase of the attack the player casts them
+in, this effect may be detrimental or beneficial to the player:
+Resetting during the windup means that the current attack is canceled,
+thus delaying the windup and launch of the next attack.
+Resets
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+7 of 16 02/04/2025, 14:10
+Resetting during the cooldown means that the remaining cooldown is
+negated, thus allowing a new windup to begin faster than normal.
+Hail of Blades does not consume a stack from launched attacks that have
+been reset.
+The following abilities will reset the basic attack timer after use:
+Aatrox's
+Umbral Dash
+Ashe's
+Ranger's Focus
+Blitzcrank's
+Power Fist
+Briar's Head
+Rush, Blood
+Frenzy, and
+Snack Attack
+Camille's
+Precision
+Protocol
+Cho'Gath's
+Vorpal Spikes
+Darius'
+Crippling Strike
+Dr. Mundo's
+Blunt Force
+Trauma
+Ekko's
+Phase Dive *
+Elise's
+Skittering
+Frenzy
+Fiora's
+Bladework
+Fizz's
+Seastone
+Trident
+Garen's
+Decisive Strike
+Graves'
+Quickdraw
+Hecarim's
+Devastating
+Charge
+Illaoi's Harsh
+Lesson
+Jax's
+Empower
+Jayce's
+Hyper Charge
+Kassadin's
+Nether Blade
+Katarina's
+Shunpo
+Kayle's
+Starfire
+Spellblade
+Kindred's
+Dance of
+Arrows *
+Leona's
+Shield of
+Daybreak
+Lucian's
+Relentless
+Pursuit *
+Malphite's
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+8 of 16 02/04/2025, 14:10
+Thunderclap
+Maokai's
+Sap Magic
+Master Yi's
+Meditate
+Nasus'
+Siphoning Strike
+Nautilus'
+Titan's Wrath
+Nidalee's
+Takedown
+Nilah's
+Slipstream
+Olaf's Tough
+It Out
+Pantheon's
+Empowered
+Shield Vault *
+Quinn's
+Vault *
+Rek'Sai's
+Queen's Wrath
+Renekton's
+Ruthless
+Predator
+Rengar's
+Savagery
+Samira's
+Daredevil
+Impulse
+Sejuani's
+Permafrost *
+Sett's
+Knuckle Down
+Shyvana's
+Twin Bite
+Sivir's
+Ricochet
+Sona's
+Power Chord
+Talon's
+Noxian
+Diplomacy
+Trundle's
+Chomp
+Twisted Fate's
+Pick a Card's
+recast
+Vayne's
+Tumble *
+Vi's
+Relentless
+Force
+Viego's
+Spectral Maw*
+Volibear's
+Thundering
+Smash
+Wukong's
+Crushing Blow
+Xin Zhao's
+Three Talon
+Strike
+Yorick's Last
+Rites
+Zac's
+Stretching
+Strikes
+Zeri's Spark
+Surge *
+Zoe's Portal
+Jump
+The following item actives will reset the basic attack timer after use:
+Titanic Hydra's Titanic Crescent
+Bel'Veth's Void Surge, Kai'Sa's Killer Instinct, K'Sante's
+Ntofo Strikes, Gwen's Skip 'n Slash, Rell's Ferromancy:
+Mount Up, Riven's Broken Wings, Skarner's Shattered Earth,
+and Hextech Rocketbelt * are attack resets that aren't considered one for
+Hail of Blades.
+Leona's Shield of Daybreak and Volibear's Thundering Smash
+are attack resets that don't put the user's basic attack timer on cooldown
+when using their spell's attacks, resulting in a double attack reset.
+Certain abilities that reset the attack timer will cause the caster to dash
+before they are able to declare a basic attack again, meaning they will not be
+Special Cases
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+9 of 16 02/04/2025, 14:10
+able to follow up with their next basic attack as quickly due to the time spent
+performing the dash. In order to bypass this lockout time, the caster can try to
+end the dash prematurely, such as dashing into a wall or dashing in place (if
+applicable). This is the case as the caster spends less time dashing and
+decreases the amount of time it takes to execute their next attack.
+A basic attack that is not is classified as having an
+. Basic attacks with uncancellable windups are only
+stopped by , , Quinn's Vault, and in some
+cases, and range. These include:
+Ambessa's Drakehound's
+Step
+Aphelios' Severum
+Blitzcrank's Power Fist
+Briar's Snack Attack
+Caitlyn's Headshot
+Camille's Precision
+Protocol
+Darius' Crippling Strike
+Dr. Mundo's Blunt Force
+Trauma
+Fizz's Seastone Trident
+Galio's Colossal Smash
+Garen's Decisive Strike
+Gragas' Drunken Rage
+Illaoi's Harsh Lesson
+(only within her base
+ attack range)
+Jax's Empower
+Jhin's Whisper (fourth
+shot)
+Kassadin's Nether Blade
+Kayle's Starfire
+Spellblade
+Maokai's Sap Magic
+Malphite's Thunderclap
+Nasus' Siphoning Strike
+Nidalee's Takedown
+Rengar's Savagery
+Samira's Daredevil
+Impulse
+Seraphine's Stage
+Presence
+Skarner's Shattered Earth
+Sona's Power Chord
+Shyvana's Twin Bite in
+Dragon Form
+Sylas' Petricite Burst
+Trundle's Chomp
+Udyr's Blazing Stampede
+Vayne's Tumble
+Vi's Relentless Force
+Volibear's Thundering
+Smash
+Wukong's Crushing Blow
+Xin Zhao's Three Talon
+Strike
+Yorick's Last Rites
+Yuumi's Feline Friendship
+Uncancellable Windup
+interruptible
+uncancellable windup
+death polymorph
+untargetability
+Untargetability interactions
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+10 of 16 02/04/2025, 14:10
+The following table features uncancellable windups that will be cancelled by
+the target becoming during the windup and those that will
+complete the windup regardless of the target being targetable or not.
+Show
+The following table features uncancellable windups that will cancel from the
+target moving too far away during the windup and those that will complete
+regardless of the target's location.
+Show
+To see the items and runes that deal bonus damage with basic attacks, see
+attack effects.
+The following champion abilities have their basic attack dealing modified
+damage:
+Akshan's Dirty Fighting
+Aphelios' Infernum
+Ashe's Frost Shot and
+Ranger's Focus
+Bel'Veth's Death in
+Lavender
+Galio's Colossal Smash
+Graves' New Destiny
+Hecarim's Devastating
+Charge
+Jayce's Hyper Charge
+Jinx's Fishbones
+K'Sante's Dauntless
+Instinct
+Lucian's Lightslinger
+Master Yi's Double Strike
+Nidalee's Takedown
+Pantheon's Shield Vault
+Renekton's Ruthless
+Predator
+Samira's Daredevil
+Impulse
+Shyvana's Twin Bite
+Sona's Power Chord
+Sylas' Petricite Burst
+Twisted Fate's Pick a
+Card
+Vi's Relentless Force
+Viego's Blade of the
+Ruined King
+Viktor's Discharge
+Yone's Way of the Hunter
+untargetable
+Hide
+Range interactions
+Hide
+Empowered Basic Attack
+Modified Damage
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+11 of 16 02/04/2025, 14:10
+Zac's Stretching Strikes Zeri's Living Battery
+The following champion abilities will empower their basic attack to deal bonus
+damage:
+Aatrox's
+Deathbringer
+Stance
+Akali's
+Assassin's Mark
+Akshan's
+Dirty Fighting
+Alistar's
+Trample
+Ambessa's
+Drakehound's
+Step
+Aphelios'
+Calibrum and
+Crescendum
+Bard's
+Traveler's Call
+Bel'Veth's
+Endless
+Banquet
+Blitzcrank's
+Power Fist and
+Static Field
+Braum's
+Concussive
+Blows
+Briar's
+Snack Attack
+Caitlyn's
+Headshot
+Camille's
+Precision
+Protocol and
+The Hextech
+Ultimatum
+Cho'Gath's
+Vorpal Spikes
+Corki's
+Hextech
+Munitions
+Darius'
+Crippling Strike
+Dr. Mundo's
+Blunt Force
+Trauma
+Diana's
+Moonsilver
+Blade
+Draven's
+Spinning Axe
+Ekko's ZDrive Resonance,
+Parallel
+Convergence, and
+Phase Dive
+Elise's
+Spider Queen
+Evelynn's
+Hate Spike
+Ezreal's
+Essence Flux
+Fiora's
+Bladework
+Fizz's
+Seastone
+Trident
+Garen's
+Decisive Strike
+Gnar's
+Hyper
+Gragas'
+Drunken Rage
+Gwen's
+Thousand Cuts
+and Skip 'n
+Slash
+Hwei's
+Stirring Lights
+Illaoi's Harsh
+Lesson
+Irelia's
+Ionian Fervor
+Ivern's
+Brushmaker
+Janna's
+Tailwind
+Jarvan IV's
+Martial Cadence
+Jax's
+Empower and
+GrandmasterAt-Arms
+Jayce's
+Transform
+Mercury Hammer
+Jhin's
+Whisper
+Kai'Sa's
+Second Skin
+Bonus Damage
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+12 of 16 02/04/2025, 14:10
+Kalista's
+Sentinel
+Kassadin's
+Nether Blade
+Kayle's
+Divine Ascent
+and Starfire
+Spellblade
+Kennen's
+Electrical Surge
+Kha'Zix's
+Unseen Threat
+Kindred's
+Mounting Dread
+Kled's
+Violent
+Tendencies
+Kog'Maw's
+Bio-Arcane
+Barrage
+K'Sante's
+Dauntless
+Instinct
+Leona's
+Sunlight (allies
+only) and Shield
+of Daybreak
+Lucian's
+Lightslinger
+Lulu's Pix,
+Faerie Companion
+Lux's
+Illumination
+Malphite's
+Thunderclap
+Master Yi's
+Wuju Style
+Milio's Fired
+Up!
+Miss Fortune's
+Love Tap
+Mordekaiser's
+Darkness Rise
+Nami's
+Tidecaller's
+Blessing
+Nasus'
+Siphoning Strike
+Nautilus'
+Staggering Blow
+and Titan's
+Wrath
+Neeko's
+Shapesplitter
+Nocturne's
+Umbra Blades
+Orianna's
+Clockwork
+Winding
+Ornn's
+Living Forge
+Poppy's Iron
+Ambassador
+Qiyana's
+Royal Privilege
+and Terrashape
+Quinn's
+Harrier
+Rammus'
+Spiked Shell
+Rek'Sai's
+Queen's Wrath
+Rell's Break
+the Mold,
+Ferromancy:
+Mount Up and
+Full Tilt
+Renata Glasc's
+Leverage
+Rengar's
+Savagery
+Riven's
+Runic Blade
+Rumble's
+Junkyard Titan
+Samira's
+Daredevil
+Impulse
+Sejuani's
+Fury of the
+North
+Senna's
+Absolution
+Sett's Pit
+Grit's and
+Knuckle Down
+Seraphine's
+Stage Presence
+Shaco's
+Backstab and
+Deceive
+Shen's
+Twilight Assault
+Shyvana's
+Flame Breath
+Sion's Glory
+in Death
+Skarner's
+Shattered Earth
+Sona's
+Power Chord
+Tahm Kench's
+An Acquired
+Taste
+Taric's
+Bravado
+Teemo's
+Toxic Shot
+Thresh's
+Flay
+Trundle's
+Chomp
+Twisted Fate's
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+13 of 16 02/04/2025, 14:10
+Stacked Deck
+Udyr's
+Wilding Claw
+and Wingborne
+Storm
+Urgot's
+Echoing Flames
+Varus'
+Blighted Quiver
+Vayne's
+Tumble and
+Silver Bolts
+Vex's Doom
+'n Gloom
+Vi's Denting
+Blows
+Viego's
+Blade of the
+Ruined King
+Volibear's
+The Relentless
+Storm and
+Thundering
+Smash
+Warwick's
+Eternal Hunger
+Wukong's
+Crushing Blow
+Xayah's
+Deadly Plumage
+Xin Zhao's
+Determination
+and Three Talon
+Strike
+Yorick's Last
+Rites and
+Eulogy of the
+Isles
+Yuumi's
+Prowling
+Projectile ( Best
+Friend only)
+Zed's
+Contempt for
+the Weak
+Ziggs' Short
+Fuse
+Zoe's More
+Sparkles!
+The following champion abilities will empower their basic attack to deal
+additional damage over time:
+Briar's Crimson Curse
+Darius' Hemorrhage
+Fizz's Seastone Trident
+Gangplank's Trial by Fire
+Milio's Fired Up!
+Nautilus' Titan's Wrath
+Sivir's Ricochet
+Skarner's Threads of Vibration
+Talon's Blade's End
+Teemo's Toxic Shot
+Twitch's Deadly Venom
+Udyr's Wilding Claw
+The following champion abilities do not do additional/modified damage to
+their target but will empower their basic attacks to give another bonus:
+Damage over Time
+Others
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+14 of 16 02/04/2025, 14:10
+Amumu's Cursed Touch
+Aphelios' Severum and
+Gravitum
+Briar's Blood Frenzy
+Camille's Adaptive
+Defenses
+Gnar's Rage Gene
+Jax's Relentless Assault
+Jayce's Lightning Field
+and Transform Mercury
+Cannon
+Jinx's Pow-Pow
+Kalista's Martial Poise
+and Rend
+Kindred's Wolf's Frenzy
+Kled's Skaarl the
+Cowardly Lizard
+Lee Sin's Flurry
+Maokai's Sap Magic
+Master Yi's Alpha Strike
+Nilah's Formless Blade
+Nunu & Willump's Call of
+the Freljord
+Olaf's Reckless Swing
+and Ragnarok
+Pantheon's Mortal Will
+Rakan's Fey Feathers
+Rammus' Defensive Ball
+Curl
+Rek'Sai's Fury of the
+Xer'Sai
+Rell's Break the Mold
+Renekton's Reign of
+Anger
+Rengar's Unseen
+Predator
+Sejuani's Permafrost
+Shaco's Two-Shiv Poison
+Shyvana's Dragon's
+Descent
+Sivir's Fleet of Foot and
+On the Hunt
+Tristana's Explosive
+Charge
+Tryndamere's Battle Fury
+and Spinning Slash
+Twitch's Spray and Pray
+Udyr's Bridge Between,
+Iron Mantle and Blazing
+Stampede
+Vel'Koz's Organic
+Deconstruction
+Xayah's Clean Cuts
+Xerath's Mana Surge
+Xin Zhao's Crescent
+Guard
+Yasuo's Last Breath
+Yuumi's Feline Friendship
+and You and Me! ( Best
+Friend) only)
+Each unit that can perform basic attacks has a unique firing and
+recovery animation for their attack's windup and winddown which
+represents the physical action of drawing into and away from an attack.
+A champion's basic attack animation may be modified by skins.
+Turrets only display their acquired target and the fired attack, for
+game clarity purposes (also, turrets are thematically stationary).
+Hostile turrets are the only units in the game that visually and
+Trivia
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+15 of 16 02/04/2025, 14:10
+[show]
+unambiguously mark an acquired target, specifically with a line from
+their apex to their target.
+In the initial iteration, the icon used to denote basic attacks is reused
+from an alpha item with unknown effects called Long Staff.
+"Basic" comes from the fact that "attack" used to refer to any hostile
+action a champion could perform, with "special attacks" referring to
+ability-based actions. Effects such as Unbreakable used to refer to
+"attacks" in their in-game tooltips, referring to what we would now
+distinguish as basic attacks and abilities. The use of "attack" to refer to
+anything other than "basic attacks" has generally been discontinued, but
+affixing the term with 'basic' remains.
+The majority of champions' windup time makes up around 15–30% of
+their attack's total time.
+Gameplay Elements
+Retrieved from "https://wiki.leagueoflegends.com/en-us/Basic_attack?oldid=3879466"
+This page was last edited on 27 March 2025, at 17:17.
+Content on this site is licensed under CC BY-SA 3.0; additional terms may apply.
+References
+Basic attack | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Basic_attack
+16 of 16 02/04/2025, 14:10
+Types
+Defensive
+Offensive
+Utility
+Increasing Statistics
+Attack speed calculations
+Growth statistic calculations
+Notes
+Infinite Stat Stacking
+Trivia
+See also
+References
+Champion statistic
+When referring to units (such as champions) a statistic measures the power of an unmodified basic attribute or capability. For example: how
+durable they are; how fast they are able to move; how quickly they are able to perform basic attacks; etc. A base effect (e.g. how much
+damage an ability deals) that increases in strength by a statistic is said to "scale with" or "scale off of" that statistic. Scaling type can either
+directly or indirectly influence the champion's capabilities, and often heavily correlates to the champion's design. Statistics define a
+champion's numerical strength at various stages of the game or a fight, but not necessarily their overall strength — nevertheless, big
+differences in statistics also mean a substantial difference in the way different champions and champion classes interact with each other on
+the battlefield, as well as influence the game.
+Statistics may be enhanced by:
+Runes
+Items
+Buffs
+Various bonuses from abilities
+And leveling up:
+All champions are able to gain experience points (XP). Experience is a unit that allows champions to obtain levels at certain
+thresholds, in order to naturally increase certain statistics. The amount of experience points required to level up increases with
+each level, and is the exact same for all champions. Some statistics are given to champions by the game rules, and are unique to
+every champion:
+Base statistics are those statistics that have unmodified values at level 1.
+Growth statistics are those increases to the base statistics that are gained explicitly by leveling up.
+Increases that are not gained purely through levels (meaning they are not base statistics, and may come from any source other
+than growth), are called bonus statistics. The exception is attack speed growth, which is gained per level, but the statistic counts
+toward "bonus attack speed".
+In the HUD, if there are any bonuses present in a statistic, the number will be highlighted in yellow; otherwise the value will remain grey.
+There are 23 types of champion statistics divided into 3 different categories: Defensive, Offensive, and Utility. In the list below, only the basic attribute of each statistic is presented. In
+League of Legends, modified attacks, abilities, items, and runes, may freely scale off of any and/or multiple statistics (and sometimes other effects), whether in their damage, defense,
+cooldown, or any other attribute.
+Health [HP]: A champion dies when their health is reduced to zero. Some abilities and effects may scale off of your own, on your ally's, or on a target enemy's: current,
+bonus, missing, or maximum health.
+Health regeneration [HP5]: The amount of health a champion passively restores per 5 seconds.
+Heal and shield power: Increases the strength of healing or shielding effects on yourself or allies. See page for related attributes, mechanics, and exceptions.
+Armor [AR]: Reduces (mitigates) the amount of physical damage taken, thus increasing a champion's effective health against physical damage.
+Magic resistance [MR]: Reduces (mitigates) the amount of magic damage taken, thus increasing a champion's effective health against magic damage.
+Tenacity: Reduces the duration of most hostile crowd control effects/disables by a percentage. Stacking multiple sources of tenacity has diminishing returns. Disables
+cannot be reduced to under 0.5 seconds.
+Slow resist: Reduces the strength of incoming hostile slows (movement speed reductions). The reduction is a percentage of the slow's strength.
+Attack speed [AS]: The number of basic attacks your champion is allowed to perform per second. See page for other relevant attributes.
+Attack damage [AD]: One of the two main offensive statistics, along with Ability Power. Unmodified basic attacks deal exactly this amount of damage.
+Ability power [AP]: One of the two main offensive statistics, along with Attack Damage.
+Critical strike chance [Crit%]: Denotes the chance that a basic attack will critically strike. Certain abilities can also critically strike for modified damage.
+Critical strike damage: Denotes the damage dealt when a basic attack critically strikes. Abilities that can critically strike usually also benefit from critical strike damage.
+Armor penetration: When applying physical damage to an enemy, ignores a part of their armor in the damage calculations. Armor penetration can be either flat (lethality) or
+percentage-based. The target's armor is unchanged.
+Magic penetration: When applying magic damage to an enemy, ignores a part of their magic resistance in the damage calculations. Magic penetration can be either flat or
+percentage-based. The target's magic resistance is unchanged.
+Life steal: How much health a champion restores, as a percentage of the post-mitigation damage dealt by basic attacks and on-hit effects.
+Physical vamp: How much health a champion restores, as a percentage of all physical damage dealt. Physical vamp is only 33% as effective when dealing or
+.
+Omnivamp: How much health a champion restores, as a percentage of all damage dealt. Omnivamp is only 20% as effective against non-champions.
+All haste, but more commonly ability haste [AH]: Reduces the cooldown of abilities by a percentage. Stacking ability haste itself has diminishing returns, but not in terms of
+cooldowns and casting.
+Ability haste is just one of several forms of haste that a champion can obtain, but it is the only one actually displayed on a champion's statistics panel.
+Resource refers to a mechanic meant to gate and be spent on ability casting. Each resource has a maximum pool or amount, and may or may not regenerate passively.
+Resource and resource regeneration are counted as two distinct and innate statistics for all champions, regardless of whether they use a certain resource type or not. Below
+are listed two prevalent resources that interact with resource-generic effects, unlike all others. For all non-mana–users, see here.
+Mana [MP]: Mana is a longer-term resource that replenishes fairly slowly, but can be improved into great supply. Some effects may scale off a portion or all of your
+mana.
+Mana regeneration [MP5]: The amount of mana a champion passively restores per 5 seconds.
+Energy: Energy is a shorter-term resource that replenishes fairly quickly, but comes in limited supply compared to mana. All champions who use energy also have at
+least one means by which they are able to restore a flat amount of energy.
+Energy regeneration: The amount of energy a champion passively restores. Energy regeneration rate is a base of 50 energy per 5 seconds for all energy users, but it
+can be increased through a few means.
+Attack range: The maximum distance that a basic attack can be initiated from. Attack range is measured in units and refers to the distance from the source's edge to the
+target's edge.
+When referring to range in general — abilities, item actives, and summoner spells' maximum distance and/or dimensions (where applicable) can also be included. Ability
+ranges have different targeting conditions.
+Movement speed [MS]: How quickly a champion moves across the map, measured in units per second.
+Note: "Units", arbitrarily named, are the basic units of game-distance, and they are used to reference all lengths and attack/ability speeds.
+Gold generation, which is the rate at which a champion passively generates gold, measured per 10 seconds.
+Contents
+Types
+Defensive
+Offensive
+area damage
+pet damage
+Utility
+Champion statistic | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Champion_statistic
+1 of 3 02/04/2025, 14:08
+There are eight base statistics that may increase through growth: attack damage, attack speed, armor, magic resistance, health, health regeneration, mana, and mana regeneration.
+The amount of those statistics gained by leveling up increases with each level (it is non‐linear):
+When leveling up from level 1 to level 2, the champion will gain 72% of the statistic's growth.
+When leveling up from level 9 to level 10, the champion will gain 100% of the statistic's growth.
+When leveling up from level 17 to level 18, the champion will gain 128% of the statistic's growth.
+To calculate a champion's statistics at a specific level, the following formula is used:
+Statistic = ���� + ����� + � × (� − 1) × (0 . 7025 + 0 . 0175 × (� − 1))
+base = initial statistic value
+bonus = bonus statistic from any source (runes, items, buffs, etc.)
+g = growth statistic
+n = current champion level
+(n - 1) = total number of level ups
+The growth statistic value is the rate at which each individual statistic increases. Each statistic has a seperate growth statistic, and it cannot be changed (with the exception of when
+Gnar and Mega Gnar change forms).
+EXAMPLE:
+Alistar starts at level 1 with 685 health (health base statistic). His health growth statistic is 120.
+At level 2, applying the equation (base = 685, g = 120, n = 2) his total health is calculated as: 771.4
+This is displayed in game as a rounded value 771.
+Four statistics that deviate from the typical design are gold generation, critical strike damage, range, and movement speed.
+All champions on the same map start the game with the same gold generation.
+All champions start with 175% base critical damage (even Ashe, Jhin, Yasuo, and others despite their innate passives).
+Every champion has unique base range and movement speed that never increases naturally. Natural increase means explicitly from leveling up itself—innate passives such as
+Tristana's Draw a Bead or Cassiopeia's Serpentine Grace, despite scaling per level, are not considered to be growth statistics.
+All other statistics have a natural value of zero and must be increased through bonus statistics. The ways a champion may increase their statistics are varied and include runes, items,
+and buffs and auras. Some champion abilities increase that champion's statistics, either passively ( Nasus' Soul Eater passively increases his life steal), actively when cast
+( Jax's Grandmaster‐At‐Arms briefly increases his armor and MR after being cast), or conditionally if a condition is satisfied ( Nocturne's Shroud of Darkness, for example,
+doubles the ability's passive bonus attack speed, if he successfully blocks a spell with the spell shield).
+Attack speed uses different types of values, instead of simply a base and a growth amount:
+Base attack speed
+Attack speed ratio, which may be the same value as the base attack speed or a different one, depending on the champion
+Bonus attack speed growth, as a percentage (%)
+Bonus attack speed from other sources, as a percentage (%)
+Because of the facts that:
+1. The base and ratio values are functionally unchanging, and the ratio is a multiplier for all attack speed gained
+2. Attack speed increases in percentages
+3. Attack speed gained through levels is considered different from attack speed gained through any other source, but they are both added together as "bonus attack speed"
+The above statistic formula must be adjusted.
+Total Attack Speed = ������ + [������� + � × (� − 1) × (0 . 7025 + 0 . 0175 × (� − 1))] × �������
+baseAs = base attack speed
+AsRatio = attack speed ratio, if different from base attack speed; otherwise, replace with baseAs
+g = percent bonus attack speed growth, gained explicitly from leveling up
+bonusAs = sum of any percent bonus attack speed gained explicitly from any source except leveling up
+n = current champion level
+(n - 1) = total number of level ups
+Example: Using Volibear at level 3 with his passive fully stacked
+Volibear's base attack speed is 0.625
+Volibear's attack speed ratio is 0.7
+Volibear's attack speed growth is 2%
+Volibear's passive grants him 5% bonus attack speed stacking up to 5 times, for a total of 25%
+Ignoring all sources of bonus attack speed except his passive, Volibear's attack speed at level 3 and fully stacked The Relentless Storm will be:
+������ + [������� + � × (� − 1) × (0 . 7025 + 0 . 0175 × (� − 1))] × �������
+0 . 625 + [0 . 25 + 0 . 02 × (3 − 1) × (0 . 7025 + 0 . 0175 × (3 − 1))] × 0 . 7
+0 . 625 + [0 . 25 + 0 . 0295] × 0 . 7
+0 . 625 + [0 . 2795] × 0 . 7
+0 . 625 + 0 . 19565
+Total Attack Speed = 0 . 82065
+To calculate the amount of statistic gained per level, use the following formula, derived from the growth term of the statistics formula:
+Stat Increase = � × (0 . 65 + 0 . 035 × New Level)
+(Where g = growth statistic)
+Increasing Statistics
+Attack speed calculations
+Growth statistic calculations
+Champion statistic | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Champion_statistic
+2 of 3 02/04/2025, 14:08
+[show]
+The number in the bracket determines the percentage of increase that happens at each level up.
+At level 2, that is 0 . 65 + 0 . 035 × 2 = 0 . 72 or 72%.
+At level 10, that is 0 . 65 + 0 . 035 × 10 = 1 . 00 or 100%.
+At level 18, that is 0 . 65 + 0 . 035 × 18 = 1 . 28 or 128%.
+By level 18, a champion will have gained 1700%, or 17 times, the growth statistic. Their total statistic would be BaseStat + 17 × GrowthStat
+Statistics having a "base" value was established in patch V4.20, These are the values at level 1.
+[1] These values can also be verified by entering a game with no runes and
+viewing the champion statistics panel.
+The same patch changed stat growth from linear to quadratic (growth increases with increasing level).
+In the champion stats panels:
+Attack damage, ability power, armor, magic resistance, attack speed, movement speed, ability haste and critical strike chance can be found in the basic (or default) stats
+menu (the player can show or hide the panel by clicking on the panel's button).
+Health regeneration, mana regeneration, heal and shield power, armor penetration, magic penetration, life steal, physical vamp, omnivamp, attack range, and tenacity can
+be found in the advanced player stats menu (default C to toggle and Ctrl + C to cycle).
+For each statistic, if its value is written in white then only the base amount is present, and if its value is is written in bold yellow then it has been increased from the base
+amount through bonuses. By hovering the cursor over almost any statistic, a tooltip can be accessed that includes extra information about the statistic and/or more precise
+values. Each stat can be hovered to show a tooltip that includes a brief description of a statistic, and total, base, and bonus values, in the format total (base + bonus).
+The base value is colored blue, and the bonus amount is colored green. If there is no bonus amount then the total value is colored blue, and if there are any bonuses then
+the total value is colored green. This coloring scheme applies to all visible stats, with the exceptions of armor penetration and magic penetration which are always written in
+blue (an inconsistency, but purely cosmetic nonetheless).
+Armor and magic resistance also include the resulting damage reduction in their respective tooltips.
+Health regeneration and resource regeneration are presented together as "Regen" and in the format Health regen. | Resource regen..
+Armor penetration and magic penetration are presented in the format Flat | Percentage.
+Total critical damage is not shown to the player. Within the critical strike chance tooltip, the value of 75% base critical damage is always listed regardless of any bonuses.
+The presented information also does not consider any other forms or values for .
+Basic stats, which include health, resource, attack damage, ability power, armor, magic resistance, attack speed, movement speed, ability haste and critical strike chance
+(along with buffs and debuffs) are displayed on the target frame, when a unit is selected. Hovering the cursor over the health line or the resource line in the HUD additionally
+displays health regeneration and resource regeneration in amount per second, as opposed to the regular amount per 5 seconds. The player can also hover their cursor over
+their own health and resource bar to view these values per second.
+The following 15 champions have an ability that infinitely stacks an effect:
+Aurelion Sol, Bard, Bel'Veth, Cho'Gath, Draven, Kindred, Nasus, Senna, Shyvana, Sion, Smolder, Swain, Sylas, Thresh, and Veigar.
+Aurelion Sol can infinitely augment the potency of his abilities by collecting Stardust stacks.
+Bel'Veth can infinitely stack her attack speed with Lavender stacks.
+Cho'Gath can infinitely stack its health with Feast stacks.
+Draven can infinitely gain Adoration stacks, assuming he does not die.
+Kindred can infinitely stack the bonus attack speed gained from Dance of Arrows which scales based on how many Marks they have.
+Nasus can infinitely stack the bonus damage of his Siphoning Strike by using it to kill enemies.
+Senna can infinitely stack her bonus attack damage, bonus range, and life steal by converting critical strike chance beyond the cap from Mist stacks.
+Shyvana can infinitely stack her resistances from Fury of the Dragonborn.
+Sion can infinitely stack his health with Soul Furnace's passive stacks.
+Smolder can infinitely stack the bonus magic damage on his basic abilities, aswell as the amount of bolts and true damage from Super Scorcher Breath by collecting
+Dragon Practice stacks.
+Swain can infinitely stack his health with Soul Fragment stacks.
+Sylas can infinitely stack his health from Hijacking an enemy Cho'Gath's Feast and gaining stacks of the ability as they are permanent.
+Thresh can infinitely stack his ability power and armor from Soul stacks.
+Veigar can infinitely stack his ability power from Phenomenal Evil Power stacks.
+While not a scaling, Yuumi can also infinitely stack friendship on ally champions with Feline Friendship.
+Passive gold generation, slow resist, and total critical strike damage are the only statistics that have to be calculated by the player during the game, and are not explicitly
+displayed anywhere in the game's menus.
+Heal and shield power was added as a functional statistic as a passive item effect in V6.13, standardized in V11.8 as a proper statistic, but only added to the stats panel in
+V14.10, almost eight years after its release.
+Lethality was implemented as a standard statistic in V14.9. Before this, it would be handled through scripts.
+Some statistics' effectiveness may also be relevant when combined with other statistics that both interact with a certain mechanic. For example, attack damage directly
+benefits the raw amount of health you gain back from life steal; both interact with the mechanic of basic attacks; and there is always an equilibrium of effectiveness among
+such statistics, depending on their availability at the time.
+Base champion statistics
+Champion statistics at level 18
+1. Patch 4.20 Notes (https://web.archive.org/web/0/http://oce.leagueoflegends.com/en/news/game-updates/patch/patch-420-notes#patch-stats-gained-per-level)
+Champion statistics
+Retrieved from "https://wiki.leagueoflegends.com/en-us/Champion_statistic?oldid=3858873"
+This page was last edited on 1 February 2025, at 13:14.
+Content on this site is licensed under CC BY-SA 3.0; additional terms may apply.
+Notes
+critical strikes
+Infinite Stat Stacking
+Trivia
+See also
+References
+Champion statistic | League of Legends Wiki https://wiki.leagueoflegends.com/en-us/Champion_statistic
+3 of 3 02/04/2025, 14:08
