@@ -505,9 +505,11 @@ class ApheliosSimulator:
         # Proper rotation delay from PDF (Note: research.txt mentions 1s assembly, 1.5s ability CD)
         # The existing ROTATION_DELAY = 0.3 seems too short for full assembly.
         # Let's use 1.0 for assembly time based on research.txt
-        assembly_time = 1.0 
-        self.time += assembly_time 
-        self.ability_cooldown = max(self.ability_cooldown, self.time + 1.5) # Ability CD after swap
+        # Applying simplification: Using ROTATION_DELAY for the weapon swap time penalty.
+        self.time += ROTATION_DELAY
+        # The 1.5s ability cooldown specifically tied to weapon assembly is removed
+        # as ROTATION_DELAY now represents the simplified total time penalty for swapping.
+        # The general ability cooldown (self.ability_cooldown) will still apply if an ability was used prior to the swap
 
         # Move exhausted weapon to end of queue and reset its ammo
         exhausted_name = self.weapon_queue.popleft()
@@ -576,7 +578,7 @@ class ApheliosSimulator:
             
             # Clean up expired chakrams and marks
             self.active_chakrams = {t for t in self.active_chakrams if t > self.time}
-            self.active_marks = {t: dmg for t, dmg in self.active_marks.items() if t > self.time}
+            self.active_marks = {t: dmg for t, dmg in self.active_marks.items() if dmg > self.time} # Corrected condition
             self.chakram_stacks = len(self.active_chakrams)
             
             # Initialize crit_occurred_for_infernum before it's potentially used
