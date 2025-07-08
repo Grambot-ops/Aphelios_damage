@@ -51,9 +51,12 @@ class ApheliosSimulator:
     def _calculate_initial_stats(self) -> Dict[str, float]:
         stats = {"BonusAD": 30, "BonusAS_percent": 54.0, "Crit": 0.0, "CritDmg": 1.75, "Lethality": 33.0, "ArmorPen_percent": 0.0}
         for item_data in self.item_objects_data:
-            stats["BonusAD"] += item_data.get('attack_damage', 0.0); stats["BonusAS_percent"] += item_data.get('percent_attack_speed', 0.0)
-            stats["Crit"] += item_data.get('critical_strike_chance', 0.0); stats["Lethality"] += item_data.get('lethality', 0.0)
-            stats["ArmorPen_percent"] = max(stats["ArmorPen_percent"], item_data.get('percent_armor_penetration', 0.0))
+            item_stats = item_data.get('stats', {}) # Safely get the stats dict
+            stats["BonusAD"] += item_stats.get('attack_damage', 0.0)
+            stats["BonusAS_percent"] += item_stats.get('percent_attack_speed', 0.0)
+            stats["Crit"] += item_stats.get('critical_strike_chance', 0.0)
+            stats["Lethality"] += item_stats.get('lethality', 0.0)
+            stats["ArmorPen_percent"] = max(stats["ArmorPen_percent"], item_stats.get('percent_armor_penetration', 0.0))
         if "Infinity Edge" in self.item_names: stats["CritDmg"] += 0.40
         stats["TotalAD"] = self.base_ad_lvl_18 + stats["BonusAD"]
         stats["TotalAS"] = min(2.5, self.aphelios_stats_data['attack_speed'] * (1 + (stats["BonusAS_percent"] / 100)))
@@ -133,39 +136,27 @@ def main():
     """Main function to orchestrate the entire process."""
     print("--- Aphelios Build Optimizer ---")
     
-    # --- Step 1: Load Cached Data from File ---
     try:
         with open("game_data.json", "r") as f:
             game_data = json.load(f)
-        
-        loaded_items = game_data["items"]
-        loaded_aphelios_stats = game_data["aphelios_stats"]
-        loaded_base_ad_18 = game_data["aphelios_base_ad_18"]
-        
+        loaded_items, loaded_aphelios_stats, loaded_base_ad_18 = game_data["items"], game_data["aphelios_stats"], game_data["aphelios_base_ad_18"]
         print(f"\n[INFO] Successfully loaded cached game data for patch {game_data['patch']}.")
         print("[INFO] To update, run 'python fetch_data.py'.")
-        
     except FileNotFoundError:
-        print("\n[ERROR] 'game_data.json' not found!")
-        print("Please run 'python fetch_data.py' first to download the required game data.")
+        print("\n[ERROR] 'game_data.json' not found! Please run 'python fetch_data.py' first.")
         sys.exit(1)
     except (json.JSONDecodeError, KeyError) as e:
-        print(f"\n[ERROR] 'game_data.json' is corrupted or invalid: {e}")
-        print("Please delete the file and run 'python fetch_data.py' again.")
+        print(f"\n[ERROR] 'game_data.json' is corrupted or invalid: {e}. Please delete it and run 'python fetch_data.py' again.")
         sys.exit(1)
 
-    # --- Step 2: Run the Simulation ---
     print("\n[SIMULATION] Starting Aphelios build optimization. This may take a few minutes...")
     duration_val, enemy_armor_val, enemy_mr_val = 60, 150, 75
     top_builds = optimize_aphelios_build(loaded_items, loaded_aphelios_stats, loaded_base_ad_18, duration_val, enemy_armor_val, enemy_mr_val, chunk_size=500)
 
-    # --- Step 3: Display Results ---
     print("\n" + "="*60, f"--- Top 10 Aphelios Builds vs Target ({enemy_armor_val} Armor, {enemy_mr_val} MR) ---", "="*60, sep="\n")
     if top_builds:
-        for i, (combo, dps) in enumerate(top_builds[:10]):
-            print(f"#{i+1: <2} | DPS: {dps:<7.2f} | Build: {', '.join(combo)}")
-    else:
-        print("No builds were successfully simulated. Check item filters or constraints.")
+        for i, (combo, dps) in enumerate(top_builds[:10]): print(f"#{i+1: <2} | DPS: {dps:<7.2f} | Build: {', '.join(combo)}")
+    else: print("No builds were successfully simulated. Check item filters or constraints.")
 
 if __name__ == "__main__":
     main()

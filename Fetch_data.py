@@ -1,20 +1,36 @@
 # fetch_data.py
-# This script's only purpose is to fetch data from the Riot API and save it to a local file.
+# This script's only purpose is to fetch all relevant item and champion data from the Riot API
+# and save it to a local file for the simulator to use.
 import os
 import sys
 import json
 import getpass
+import re
+
+def camel_to_snake(name: str) -> str:
+    """Converts a camelCase string to snake_case."""
+    s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
+    return re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1).lower()
+
+# A comprehensive list of all stats an item can have in camelCase format
+ALL_ITEM_STATS_CAMEL_CASE = [
+    "health", "healthRegen", "mana", "manaRegen", "armor", "magicResist",
+    "attackDamage", "abilityPower", "attackSpeed", "percentAttackSpeed",
+    "criticalStrikeChance", "lethality", "percentArmorPenetration",
+    "percentBonusArmorPenetration", "magicPenetrationFlat",
+    "percentMagicPenetration", "lifeSteal", "spellVamp", "omnivamp",
+    "abilityHaste", "cooldownReduction", "percentMoveSpeed", "moveSpeed"
+]
 
 def fetch_and_save_data():
     """
-    Connects to the Riot API using Cassiopeia, fetches item and champion data,
-    processes it into a simple format, and saves it to 'game_data.json'.
+    Connects to the Riot API, fetches data, processes it into a simple format,
+    and saves it to 'game_data.json'.
     """
     try:
         import cassiopeia as cass
     except ImportError:
-        print("ERROR: 'cassiopeia' library is not installed.")
-        print("Please run: pip install cassiopeia")
+        print("ERROR: 'cassiopeia' library is not installed. Please run: pip install cassiopeia")
         sys.exit(1)
 
     # --- 1. Get User Input for Configuration ---
@@ -43,10 +59,24 @@ def fetch_and_save_data():
         settings = {"pipeline": {"Cache": {}, "DDragon": {}, "RiotAPI": {"api_key": api_key}}, "logging": {"print_calls": False}}
         cass.apply_settings(settings)
         
-        print(f"[API] Fetching data for region {user_region}...")
+        print(f"[API] Fetching item list for region {user_region}...")
         cass_items_raw = cass.get_items(region=user_region)
+        print(f"[API] Fetched {len(cass_items_raw)} item stubs. Now fully loading each item's data...")
+        
+        loaded_items_list = []
+        for i, item in enumerate(cass_items_raw):
+            try:
+                _ = item.gold.total
+                loaded_items_list.append(item)
+            except Exception:
+                continue
+            if (i + 1) % 50 == 0:
+                print(f"  > Loaded data for {i + 1}/{len(cass_items_raw)} items...")
+        
+        print("[API] All item data fully loaded.")
         aphelios_data_raw = cass.get_champion("Aphelios", region=user_region)
-        print("[API] Data fetched successfully.")
+        print("[API] Champion data fetched successfully.")
+
     except Exception as e:
         print(f"\n[ERROR] Failed to fetch data from Riot API. {type(e).__name__}: {e}")
         print("Please ensure your API key is valid and not expired.")
@@ -54,21 +84,28 @@ def fetch_and_save_data():
 
     # --- 3. Process Data into Simple Dictionaries ---
     print("\n[PROCESS] Processing and simplifying API data...")
-    simple_items_data = {
-        item.name: {
-            'attack_damage': item.stats.attack_damage,
-            'percent_attack_speed': item.stats.percent_attack_speed,
-            'critical_strike_chance': item.stats.critical_strike_chance,
-            'lethality': getattr(item.stats, 'lethality', 0.0),
-            'percent_armor_penetration': getattr(item.stats, 'percent_armor_penetration', 0.0) or getattr(item.stats, 'percent_bonus_armor_penetration', 0.0)
-        }
-        for item in cass_items_raw if item.in_store and item.gold.total > 1500 and "Mythic" not in item.description and "Support" not in item.tags
-    }
+    
+    simple_items_data = {}
+    for item in loaded_items_list:
+        if item.gold.total > 1500 and "Mythic" not in item.description:
+            item_stats = {}
+            for stat_name_camel in ALL_ITEM_STATS_CAMEL_CASE:
+                value = getattr(item.stats, stat_name_camel, 0.0)
+                if value != 0.0: # Only store stats the item actually has
+                    stat_name_snake = camel_to_snake(stat_name_camel)
+                    item_stats[stat_name_snake] = value
+            
+            # Special handling for armor penetration which has two possible sources
+            pen_value = getattr(item.stats, 'percentArmorPenetration', 0.0) or getattr(item.stats, 'percentBonusArmorPenetration', 0.0)
+            if pen_value != 0.0:
+                item_stats['percent_armor_penetration'] = pen_value
+
+            simple_items_data[item.name] = {'stats': item_stats}
     
     aphelios_stats_data = {
-        'attack_damage': aphelios_data_raw.stats.attack_damage,
-        'attack_damage_per_level': aphelios_data_raw.stats.attack_damage_per_level,
-        'attack_speed': aphelios_data_raw.stats.attack_speed
+        'attack_damage': aphelios_data_raw.stats.attackDamage,
+        'attack_damage_per_level': aphelios_data_raw.stats.attackDamagePerLevel,
+        'attack_speed': aphelios_data_raw.stats.attackSpeed
     }
     
     level_ups = 17
