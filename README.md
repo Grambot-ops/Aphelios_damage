@@ -1,140 +1,108 @@
 # Aphelios DPS Build Optimizer
 
-This project is a sophisticated Python script that calculates the optimal item build for the League of Legends champion Aphelios by simulating combat DPS. It uses the `cassiopeia` library to fetch live, up-to-date item and champion data directly from the Riot Games API, ensuring the calculations are always based on the current game patch.
+This project is a sophisticated and robust Python tool that calculates the optimal item build for the League of Legends champion Aphelios by simulating his combat DPS. It uses a clean, two-script architecture to separate data fetching from data processing, ensuring stability, efficiency, and offline capability.
 
-The simulation is parallelized using multiprocessing to test tens of thousands of valid item combinations quickly and efficiently.
+- `fetch_data.py`: A utility script to connect to the Riot Games API, download all necessary item and champion data for the current patch, and cache it locally in a `game_data.json` file.
+- `simulate.py`: The core simulation engine. It reads the local `game_data.json` file and uses parallel processing to rapidly test tens of thousands of valid item combinations, providing a ranked list of the highest DPS builds.
 
-## Features
+## Key Features
 
-- **Live Game Data**: Pulls all item and champion statistics from Riot's Data Dragon, so it never goes out of date.
-- **Stateful Simulation**: Accurately models complex mechanics like Crescendum chakram stacking and weapon ammo.
-- **Parallel Processing**: Uses all available CPU cores to rapidly simulate thousands of builds.
-- **User-Friendly Setup**: Includes interactive prompts for your Riot API key and server region.
-- **Dependency Checking**: Automatically detects if `cassiopeia` is not installed and provides the correct installation command.
+- **Decoupled Architecture**: Completely separates API interaction from the simulation logic, preventing library initialization errors and allowing for offline use.
+- **Live Game Data Cache**: Fetches the latest item and champion stats with `fetch_data.py` to ensure all calculations are accurate for the current patch.
+- **Accurate Mechanics**: Models complex, stateful Aphelios mechanics like Crescendum chakram stacking, weapon ammo, Calibrum marks, and weapon-specific ability interactions.
+- **Data-Driven Calculations**: Uses the official non-linear stat growth formulas from the LoL Wiki for precise level 18 champion stats.
+- **High-Performance Simulation**: Utilizes all available CPU cores via multiprocessing to rapidly simulate thousands of builds without consuming excessive memory.
+- **User-Friendly Setup**: Includes interactive prompts for your Riot API key and server region during the one-time data fetch.
 
 ## Requirements
 
 - Python 3.7+
 - `pip` (Python's package installer)
+- `cassiopeia` library (`pip install cassiopeia`)
 - A valid Riot Games API Key. You can get one from the [Riot Developer Portal](https://developer.riotgames.com/).
 
-## Setup and Installation
+## How to Use
 
-Follow these steps in your terminal to get the project running. Using a virtual environment is the recommended and safest way to handle Python projects, especially on systems like Arch Linux.
+Follow this two-step workflow to get started.
 
-**1. Navigate to the Project Directory**
+### Step 1: Fetch and Cache Game Data (Run Once per Patch)
 
-Open your terminal and `cd` into the folder where you saved the `Damage.py` script.
+First, you need to create the local data cache. This step requires an internet connection and your Riot API key.
+
+1.  **Navigate to the Project Directory**
+
+    Open your terminal and `cd` into the folder containing `fetch_data.py` and `simulate.py`.
+
+    ```bash
+    cd /path/to/your/Aphelios_Optimizer
+    ```
+
+2.  **Install the Required Library**
+
+    If you haven't already, install `cassiopeia`. Using a virtual environment is highly recommended.
+
+    ```bash
+    # Create and activate a virtual environment (optional but recommended)
+    python -m venv venv
+    source venv/bin/activate
+
+    # Install the library
+    pip install cassiopeia
+    ```
+
+3.  **Run the Fetch Script**
+
+    Execute the `fetch_data.py` script.
+
+    ```bash
+    python fetch_data.py
+    ```
+
+    The script will guide you:
+
+    - It will first ask for your **Riot API Key**. Paste it in and press Enter. (Your input will be hidden for security).
+    - Next, it will ask for your **server region** (e.g., `EUW`, `NA`, `KR`).
+
+    Upon completion, a `game_data.json` file will be created in the same directory.
+
+### Step 2: Run the DPS Simulation
+
+Once `game_data.json` exists, you can run the simulation as many times as you want, even without an internet connection. This step does **not** require an API key.
 
 ```bash
-cd /path/to/your/Aphelios_damage
+python simulate.py
 ```
 
-**2. Create a Python Virtual Environment**
-
-This creates a self-contained environment for the project's dependencies, so they don't interfere with your system's Python packages.
-
-```bash
-python -m venv venv
-```
-
-**3. Activate the Virtual Environment**
-
-You must activate the environment to use it.
-
-```bash
-source venv/bin/activate
-```
-
-Your terminal prompt should now be prefixed with `(venv)`, indicating the environment is active.
-
-**4. Install Required Libraries**
-
-With the environment active, use `pip` to install `cassiopeia`.
-
-```bash
-pip install cassiopeia
-```
-
-## How to Run the Script
-
-Make sure your virtual environment is still active (`(venv)` is visible in your prompt). Then, simply run the Python script:
-
-```bash
-python Damage.py
-```
-
-The script will then guide you through the setup:
-
-1.  It will first ask for your **Riot API Key**. Paste it in and press Enter. (Your input will be hidden for security).
-2.  Next, it will ask for your **server region** (e.g., `EUW`, `NA`, `KR`).
-3.  After that, it will fetch the latest game data and begin the simulation.
-
-## Troubleshooting Guide
-
-Here are solutions to the common errors encountered during the setup and execution of this script.
+The script will read the local data, perform the high-speed calculations, and print the top 10 highest-DPS builds based on the simulation parameters.
 
 ---
 
-### Error 1: `ModuleNotFoundError: No module named 'cassiopeia'`
+## Project Evolution and Changelog
 
-This is the most common error and happens when the script starts.
+This project underwent several key architectural changes to resolve complex issues related to library initialization and multiprocessing. The final design is a result of this iterative debugging process.
 
-- **Symptom:** The script immediately exits and prints a message telling you to install `cassiopeia`.
-- **Cause:** You have not installed the required library, or you have installed it in the wrong Python environment.
-- **Solution:**
-  1.  Make sure you have **activated the virtual environment** first by running `source venv/bin/activate` in the project directory.
-  2.  Run the installation command: `pip install cassiopeia`.
+- **Initial Version:** Relied on global variables for storing API data and used a single script.
+  - **Problem:** This led to `ValueError: object has already been loaded` errors. The `cassiopeia` library would initialize a default data pipeline on import, which then conflicted with the script's attempt to apply a new configuration.
+- **Refactoring Attempt 1:** Used dedicated setter functions (`cass.set_riot_api_key`) instead of `cass.apply_settings`.
+  - **Problem:** This still triggered partial initialization, leading to `AttributeError` on some library versions and `QueryValidationError` on others, as the default region was not being consistently applied.
+- **Refactoring Attempt 2:** Isolated the `cassiopeia` import inside a function.
+  - **Problem:** This fixed the initialization race condition but created a new problem with multiprocessing. Worker processes would re-import the script but could not access the data loaded by the main process, as it was not passed explicitly.
+- **Final Architecture (Current Version):**
+  - **Solution:** The project was split into two distinct scripts (`fetch_data.py` and `simulate.py`).
+  - **Benefit:** This provides a **complete separation of concerns**. The `fetch_data.py` script is the only part of the project that knows about the API. It creates a "clean," serializable `game_data.json` file. The `simulate.py` script is a pure-Python engine that is fast, stable, and completely independent of the API library's state, making it perfectly safe for multiprocessing. This is the most robust and correct architecture.
 
----
+## Troubleshooting
 
-### Error 2: `Failed to configure Cassiopeia or load data: ...`
+- **Error: `FileNotFoundError: [Errno 2] No such file or directory: 'game_data.json'` when running `simulate.py`**
 
-This error occurs after you have entered your API key and region.
+  - **Cause:** You have not created the local data cache yet.
+  - **Solution:** Run `python fetch_data.py` first to generate the `game_data.json` file.
 
-- **Symptom:** The script prints `[ERROR] Failed to configure Cassiopeia...` followed by a more specific message.
-- **Possible Causes & Solutions:**
+- **Error: `ValueError: object has already been loaded` or `QueryValidationError` when running `fetch_data.py`**
 
-  1.  **Message: `object has already been loaded`**
+  - **Cause:** This error should no longer occur with the current architecture. If it does, it means an older version of the script is being used.
+  - **Solution:** Ensure you are using the latest version of the code provided, where all API interactions are cleanly isolated within the `fetch_and_save_data` function.
 
-      - _Cause:_ This is an internal state error in Cassiopeia that occurs when its settings are configured in multiple steps instead of all at once.
-      - _Solution:_ The script has been fixed to use a single, atomic `cass.apply_settings()` call that includes the API key and region in one dictionary. This should no longer occur with the final version of the code.
-
-  2.  **Message: `No source can provide "RealmData"`**
-
-      - _Cause:_ You are telling Cassiopeia to use a custom data pipeline, but you have not included the essential `DDragon` source. `DDragon` is required to get basic game metadata like the current patch version, champion list, and item list.
-      - _Solution:_ Your settings dictionary must define the full, standard pipeline. The corrected script now does this automatically.
-        ```python
-        "pipeline": {
-            "Cache": {},
-            "DDragon": {},
-            "RiotAPI": { "api_key": api_key }
-        }
-        ```
-
-  3.  **Message: `Data not found (404)` or `Forbidden (403)`**
-      - _Cause:_ Your Riot API key is incorrect, has expired, or has been blacklisted.
-      - _Solution:_
-        - Go to the [Riot Developer Portal](https://developer.riotgames.com/) and verify your key is correct.
-        - Generate a new key if it has expired.
-        - Ensure you haven't exceeded your rate limits.
-
----
-
-### Error 3: `FileNotFoundError: [Errno 2] No such file or directory` during `pip install`
-
-This error is not related to Python, but to your terminal's state.
-
-- **Symptom:** Running `pip install cassiopeia` fails immediately with this error.
-- **Cause:** The terminal's current working directory has been deleted or renamed since you opened the terminal. The `pip` command doesn't know "where" it is.
-- **Solution:** Reset your terminal's location to a known-good directory, like your home folder, and try again.
-
-  ```bash
-  # Move to your home directory
-  cd ~
-
-  # Now, navigate back to your project and install
-  cd /path/to/your/Aphelios_damage
-  source venv/bin/activate
-  pip install cassiopeia
-  ```
+- **Error: `403 Forbidden` or `401 Unauthorized` during data fetching**
+  - **Cause:** Your Riot API key is invalid, has expired, or has been blacklisted.
+  - **Solution:** Go to the [Riot Developer Portal](https://developer.riotgames.com/), verify your key is correct, and generate a new one if it has expired (development keys expire every 24 hours).
